@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'infopages/aboutus'
+
+  get 'infopages/contact'
+
+  get 'static_pages/create'
+
+  get 'static_pages/read'
+
+  get 'static_pages/update'
+
+  get 'static_pages/destroy'
+
   get 'static_pages/userinterface'
 
   # The priority is based upon order of creation: first created -> highest priority.
