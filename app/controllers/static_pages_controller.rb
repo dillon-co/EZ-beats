@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
 
   def destroy
   end
+
+  def userinterface
+  end
 end
