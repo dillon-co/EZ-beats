@@ -7,9 +7,16 @@
 
 /* background gradient */
 
-html {
+body {
   height: 100%;
   background: white;
   background: radial-gradient(circle, #fff 20%, #ccc);
 	background-size: cover;
+}
+
+div.jumbotron{
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: gray;
 }
