@@ -14,9 +14,27 @@ body {
 	background-size: cover;
 }
 
+.jumbotron h1.eztitle{
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.jumbotron h1{
+  color: white;
+}
+
 div.jumbotron{
   width: 400px;
+  margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
   background-color: gray;
+}
+
+div.container{
+  width: 335px;
+  margin-right: auto;
+  margin-left: auto;
 }
