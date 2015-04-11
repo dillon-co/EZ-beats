@@ -12,49 +12,71 @@
     <div class="container">
     
       <h1 class="eztitle">EZ-Beats</h1>
-      <p id="bonus">
-       
-          <button type="button"  class="bonus btn btn-lg btn-primary" id="1_1">B1</button>
-          <button type="button"  class="bonus btn btn-lg btn-primary" id="1_2">B2</button>
-          <button type="button"  class="bonus btn btn-lg btn-primary" id="1_3">B3</button>
-          <button type="button"  class="bonus btn btn-lg btn-primary" id="1_4">B4</button>
-          <button type="button"  class="bonus btn btn-lg btn-primary" id="1_5">B5</button>
+
+
+      <p id="songs">
+          <%= audio_tag "melodies/anxiety-drop.mp3", class: "audio-play", id:"1_1_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="1_1">B1</button>
+          <%= audio_tag "melodies/piano_4.mp3", class: "audio-play", id:"1_2_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="1_2">B2</button>
+          <%= audio_tag "melodies/trance_melody.mp3", class: "audio-play", id:"1_3_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="1_3">B3</button>
+          <%= audio_tag "melodies/moar-chords.mp3", class: "audio-play", id:"1_4_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="1_4">B4</button>
+          <%= audio_tag "melodies/piano_1.mp3", class: "audio-play", id:"1_5_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="1_5">B5</button>
         </p>
 
-        <p id="voices">
-       
-          <button type="button"  class="voices btn btn-lg btn-primary" id="2_1">V1</button>
-          <button type="button"  class="voices btn btn-lg btn-primary" id="2_2">V2</button>
-          <button type="button"  class="voices btn btn-lg btn-primary" id="2_3">V3</button>
-          <button type="button"  class="voices btn btn-lg btn-primary" id="2_4">V4</button>
-          <button type="button"  class="voices btn btn-lg btn-primary" id="2_5">V5</button>
+        <p id="songs">
+          <%= audio_tag "leads/big-room-house.mp3", class: "audio-play", id:"2_1_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="2_1">V1</button>
+          <%= audio_tag "leads/big-room-house_1.mp3", class: "audio-play", id:"2_2_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="2_2">V2</button>
+          <%= audio_tag "leads/electro-lead.mp3", class: "audio-play", id:"2_3_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="2_3">V3</button>
+          <%= audio_tag "leads/pluck-lead.mp3", class: "audio-play", id:"2_4_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="2_4">V4</button>
+          <%= audio_tag "leads/vibrato-synth.mp3", class: "audio-play", id:"2_5_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="2_5">V5</button>
         </p>
 
-        <p id="melodies">
-       
-          <button type="button"  class="melodies btn btn-lg btn-primary" id="3_1">D1</button>
-          <button type="button"  class="melodies btn btn-lg btn-primary" id="3_2">D2</button>
-          <button type="button"  class="melodies btn btn-lg btn-primary" id="3_3">D3</button>
-          <button type="button"  class="melodies btn btn-lg btn-primary" id="3_4">D4</button>
-          <button type="button"  class="melodies btn btn-lg btn-primary" id="3_5">D5</button>
+        <p id="songs">
+          <%= audio_tag "riffs/EDM-chords.mp3", class: "audio-play", id:"3_1_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="3_1">D1</button>
+          <%= audio_tag "riffs/electric-loop.mp3", class: "audio-play", id:"3_2_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="3_2">D2</button>
+          <%= audio_tag "riffs/on-the-house.mp3", class: "audio-play", id:"3_3_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="3_3">D3</button>
+          <%= audio_tag "riffs/organ-riff.mp3", class: "audio-play", id:"3_4_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="3_4">D4</button>
+          <%= audio_tag "riffs/saw-plucked.mp3", class: "audio-play", id:"3_5_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="3_5">D5</button>
         </p>
 
-        <p id="effects">
-       
-          <button type="button"  class="effects btn btn-lg btn-primary" id="4_1">E1</button>
-          <button type="button"  class="effects btn btn-lg btn-primary" id="4_2">E2</button>
-          <button type="button"  class="effects btn btn-lg btn-primary" id="4_3">E3</button>
-          <button type="button"  class="effects btn btn-lg btn-primary" id="4_4">E4</button>
-          <button type="button"  class="effects btn btn-lg btn-primary" id="4_5">E5</button>
+        <p id="songs">
+          <%= audio_tag "beats/beat-box.mp3", class: "audio-play", id:"4_1_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="4_1">E1</button>
+          <%= audio_tag "beats/herman-beatbox.mp3", class: "audio-play", id:"4_2_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="4_2">E2</button>
+          <%= audio_tag "beats/house-beats.mp3", class: "audio-play", id:"4_3_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="4_3">E3</button>
+          <%= audio_tag "beats/kick-and-claps.mp3", class: "audio-play", id:"4_4_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="4_4">E4</button>
+          <%= audio_tag "beats/psy.mp3", class: "audio-play", id:"4_5_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="4_5">E5</button>
         </p>
 
-        <p id="percussion">
-       
-          <button type="button"  class="percussion btn btn-lg btn-primary" id="5_1">P1</button>
-          <button type="button"  class="percussion btn btn-lg btn-primary" id="5_2">P2</button>
-          <button type="button"  class="percussion btn btn-lg btn-primary" id="5_3">P3</button>
-          <button type="button"  class="percussion btn btn-lg btn-primary" id="5_4">P4</button>
-          <button type="button"  class="percussion btn btn-lg btn-primary" id="5_5">P5</button>
+        <p id="songs">
+          <%= audio_tag "bass/believe.mp3", class: "audio-play", id:"5_1_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="5_1">P1</button>
+          <%= audio_tag "bass/anthem-bass.mp3", class: "audio-play", id:"5_2_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="5_2">P2</button>
+          <%= audio_tag "bass/infectious.mp3", class: "audio-play", id:"5_3_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="5_3">P3</button>
+          <%= audio_tag "bass/house.mp3", class: "audio-play", id:"5_4_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="5_4">P4</button>
+          <%= audio_tag "bass/bass-clean.mp3", class: "audio-play", id:"5_5_sound" %>
+          <button type="button"  class="songs btn btn-lg btn-primary" id="5_5">P5</button>
         </p>
      <p>
       <button class="clear btn btn-lg btn-default">Clear</button>
@@ -63,5 +85,23 @@
   </div>
 </div>
 </body>
+
+
+<script type="text/javascript">
+  
+$( document ).ready(function() { 
+  $(".songs").on("click", function() {
+    var id = event.target.id;
+    $("#"+id+"_sound")[0].currentTime = 0;
+    return $("#"+id+"_sound")[0].play();
+  });
+});  
+  
+   
+
+
+
+
+</script>
 
 </html>
