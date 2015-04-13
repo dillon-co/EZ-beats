@@ -1,6 +1,7 @@
 <h1> Songs </h1>
+<p><%= link_to 'New Song', new_song_path %></p>
 <% @songs.each do |song| %>
   <h2><%= song.title %></h2>
   <h3><%= song.author %></h3>
-  <%= link_to 'Show Song, post_path(post) %>
+  <%= link_to 'Show Song', song_path(song) %>
 <% end %>
