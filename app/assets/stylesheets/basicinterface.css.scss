@@ -1,3 +1,8 @@
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Ghang_Plain.ttf) format(truetype);
+}
 /* basic reset */
 *{
   margin: 0;
@@ -7,11 +12,10 @@
 
 /* background gradient */
 
-body {
-  height: 100%;
-  background: black;
-  background: radial-gradient(circle, #000 20%, #ccc);
-	background-size: cover;
+body{
+  /*height: 100%;*/
+  background-image: url(shattered.png);
+  
 }
 
 p{
@@ -20,6 +24,8 @@ p{
 
 .jumbotron h1.eztitle{
   color: white;
+  font-family: myFirstFont;
+  font-size: 60px;
   margin-top: 10px;
   margin-bottom: 50px;
   text-shadow: 2px 2px 5px #000;
@@ -27,14 +33,20 @@ p{
 
 .jumbotron h1{
   color: white;
+  font-family: myFirstFont;
 }
 
 div.jumbotron{
   width: 400px;
   margin-top: 50px;
+  background-image: url(grey_wash_wall.png);
   margin-right: auto;
   margin-left: auto;
-  background-color: gray;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black;
+     -moz-box-shadow: 0 30px 15px -6px black;
+          box-shadow: 0 30px 15px -6px black;
+   /*box-shadow: 1px 20px 15px #000;*/
 }
 
 div.container{
