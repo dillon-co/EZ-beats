@@ -12,7 +12,6 @@ body {
   background: black;
   background: radial-gradient(circle, #000 20%, #ccc);
 	background-size: cover;
-  
 }
 
 p{
@@ -67,21 +66,29 @@ div.toggle.btn{
 }
 
 div.toggle.btn.btn-primary{
-  border-color: #48E51D;
+  border-color: #44FF1B;
+
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
 }
 
-/*label.btn-primary:hover, 
-.btn-primary:focus, 
-.btn-primary.focus, 
-.btn-primary:active, 
-.btn-primary.active, 
-.open > 
-.btn-primary
-.dropdown-toggle{
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {border-color: red;}
+    25%  {border-color: yellow;}
+    50%  {border-color: blue;}
+    100% {border-color: green;}
+}
 
-background-color: red;
-
-
-}*/
-
-
+/* Standard syntax */
+@keyframes example {
+    0%   {border-color: red;}
+    25%  {border-color: yellow;}
+    50%  {border-color: blue;}
+    100% {border-color: green;}
+}
