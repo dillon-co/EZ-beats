@@ -1,7 +1,14 @@
-
 @font-face {
-    font-family: myFirstFont;
-    src: url(fonts/Ghang_Plain.ttf) format(truetype);
+    font-family: 'ghang_plain_';
+    src: url('ghang_plain-webfont.eot');
+    src: url('ghang_plain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ghang_plain-webfont.woff2') format('woff2'),
+         url('ghang_plain-webfont.woff') format('woff'),
+         url('ghang_plain-webfont.ttf') format('truetype'),
+         url('ghang_plain-webfont.svg#ghang_plain_') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 /* basic reset */
 *{
@@ -22,18 +29,25 @@ p{
   width: 315px;
 }
 
-.jumbotron h1.eztitle{
+h1.eztitle{
+  text-align: center;
   color: white;
-  font-family: myFirstFont;
-  font-size: 60px;
-  margin-top: 10px;
-  margin-bottom: 50px;
-  text-shadow: 2px 2px 5px #000;
+  font-family: 'ghang_plain_';
+  font-size: 80px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-shadow: -4px 6px 3px #000;
+  -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-color: #b4b4b4;
+    -webkit-text-stroke-width: 1px;
+    text-fill-color: #fff;
+    text-stroke-color: #b4b4b4;
+    text-stroke-width: 1px;
 }
 
 .jumbotron h1{
   color: white;
-  font-family: myFirstFont;
+  font-family: 'ghang_plain_';
 }
 
 div.jumbotron{
