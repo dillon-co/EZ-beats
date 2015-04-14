@@ -17,12 +17,9 @@
   box-sizing: border-box;
 }
 
-/* background gradient */
-
 body{
   /*height: 100%;*/
   background-image: url(shattered.png);
-  
 }
 
 p{
@@ -48,6 +45,7 @@ h1.eztitle{
   color: white;
   font-family: 'ghang_plain_';
 }
+
 
 div.jumbotron{
   width: 400px;
@@ -75,7 +73,7 @@ span.toggle-handle{
 label.toggle-off.btn{
   padding-left: 10px;
   padding-top: 13px;
-  
+
 }
 
 label.toggle-on.btn{
@@ -91,8 +89,17 @@ div.toggle.btn{
 }
 
 div.toggle.btn.btn-primary{
-  border-color: #44FF1B;
-  border-width: 2px;
+  border-color: #48E51D;
+}
+
+label.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open >
+.btn-primary
+.dropdown-toggle{
 
   -webkit-animation-name: example; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
