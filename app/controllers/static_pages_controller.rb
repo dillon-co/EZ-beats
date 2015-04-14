@@ -1,5 +1,4 @@
 class StaticPagesController < ApplicationController
-  def home
+  def userinterface
   end
-
 end
