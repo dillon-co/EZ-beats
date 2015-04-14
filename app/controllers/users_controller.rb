@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def profile
     @user = current_user
-    @song = Song.find(params[:id])
+    @songs = current_user.songs
   end
 
   def show
@@ -13,4 +13,11 @@ class UsersController < ApplicationController
   def index
     @users = User.all
   end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:avatar)
+  end
+
 end
