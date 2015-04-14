@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'ghang_plain_';
+    src: url('ghang_plain-webfont.eot');
+    src: url('ghang_plain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ghang_plain-webfont.woff2') format('woff2'),
+         url('ghang_plain-webfont.woff') format('woff'),
+         url('ghang_plain-webfont.ttf') format('truetype'),
+         url('ghang_plain-webfont.svg#ghang_plain_') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 /* basic reset */
 *{
   margin: 0;
@@ -7,9 +19,102 @@
 
 /* background gradient */
 
-html {
-  height: 100%;
-  background: white;
-  background: radial-gradient(circle, #fff 20%, #ccc);
-	background-size: cover;
+body{
+  /*height: 100%;*/
+  background-image: url(shattered.png);
+  
+}
+
+p{
+  width: 315px;
+}
+
+h1.eztitle{
+  text-align: center;
+  color: white;
+  font-family: 'ghang_plain_';
+  font-size: 80px;
+  margin-top: 80px;
+  text-shadow: -4px 6px 3px #000;
+  -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-color: #a4a4a4;
+    -webkit-text-stroke-width: 1px;
+    text-fill-color: #fff;
+    text-stroke-color: #a4a4a4;
+    text-stroke-width: 1px;
+}
+
+.jumbotron h1{
+  color: white;
+  font-family: 'ghang_plain_';
+}
+
+div.jumbotron{
+  width: 400px;
+  margin-top: 30px;
+  background-image: url(grey_wash_wall.png);
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black;
+     -moz-box-shadow: 0 30px 15px -6px black;
+          box-shadow: 0 30px 15px -6px black;
+   /*box-shadow: 1px 20px 15px #000;*/
+}
+
+div.container{
+  width: 335px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+span.toggle-handle{
+  display: none;
+}
+
+label.toggle-off.btn{
+  padding-left: 10px;
+  padding-top: 13px;
+  
+}
+
+label.toggle-on.btn{
+  padding-right: 15px;
+  padding-top: 13px;
+  background-color: #a2a2a2;
+  border-color: #FF00E7;
+}
+
+div.toggle.btn{
+  min-width: 54px;
+  min-height: 46px;
+}
+
+div.toggle.btn.btn-primary{
+  border-color: #44FF1B;
+  border-width: 2px;
+
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {border-color: red;}
+    25%  {border-color: yellow;}
+    50%  {border-color: blue;}
+    100% {border-color: green;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {border-color: red;}
+    25%  {border-color: yellow;}
+    50%  {border-color: blue;}
+    100% {border-color: green;}
 }
