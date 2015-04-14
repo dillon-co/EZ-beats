@@ -9,9 +9,14 @@
 
 body {
   height: 100%;
-  background: white;
-  background: radial-gradient(circle, #fff 20%, #ccc);
+  background: black;
+  background: radial-gradient(circle, #000 20%, #ccc);
 	background-size: cover;
+  
+}
+
+p{
+  width: 315px;
 }
 
 .jumbotron h1.eztitle{
@@ -38,3 +43,45 @@ div.container{
   margin-right: auto;
   margin-left: auto;
 }
+
+span.toggle-handle{
+  display: none;
+}
+
+label.toggle-off.btn{
+  padding-left: 10px;
+  padding-top: 13px;
+  
+}
+
+label.toggle-on.btn{
+  padding-right: 15px;
+  padding-top: 13px;
+  background-color: #a2a2a2;
+  border-color: #FF00E7;
+}
+
+div.toggle.btn{
+  min-width: 54px;
+  min-height: 46px;
+}
+
+div.toggle.btn.btn-primary{
+  border-color: #48E51D;
+}
+
+/*label.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary.focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open > 
+.btn-primary
+.dropdown-toggle{
+
+background-color: red;
+
+
+}*/
+
+
