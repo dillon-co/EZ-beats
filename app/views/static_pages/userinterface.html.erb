@@ -40,7 +40,7 @@
           <button type="button"  class="songs btn btn-lg btn-primary" id="2_5">V5</button>
         </p>
 
-        <p id="songs">
+        <div id="songs">
           <%= audio_tag "riffs/EDM-chords.mp3", class: "audio-play", id:"3_1_sound" %>
           <button type="button"  class="songs btn btn-lg btn-primary" id="3_1">D1</button>
           <%= audio_tag "riffs/electric-loop.mp3", class: "audio-play", id:"3_2_sound" %>
@@ -51,7 +51,7 @@
           <button type="button"  class="songs btn btn-lg btn-primary" id="3_4">D4</button>
           <%= audio_tag "riffs/saw-plucked.mp3", class: "audio-play", id:"3_5_sound" %>
           <button type="button"  class="songs btn btn-lg btn-primary" id="3_5">D5</button>
-        </p>
+        </div>
 
         <p id="songs">
           <%= audio_tag "beats/beat-box.mp3", class: "audio-play", id:"4_1_sound" %>
@@ -89,7 +89,7 @@
 
 <script type="text/javascript">
   
-$( document ).ready(function() { 
+$( document ).ready(function() {
   $(".songs").on("click", function() {
     var id = event.target.id;
     $("#"+id+"_sound")[0].currentTime = 0;
