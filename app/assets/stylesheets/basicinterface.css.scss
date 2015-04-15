@@ -24,9 +24,15 @@ body{
   background-image: url(shattered.png);
   
 }
+h5{
+  color: rgb(97, 97, 97);
+  font-size: 30px;
+  background-color: transparent;
+  text-shadow: rgb(168, 163, 163) 1px 1px 0px;
+}
 
 p{
-  width: 315px;
+  width: 550px;
 }
 
 h1.eztitle{
@@ -34,7 +40,7 @@ h1.eztitle{
   color: white;
   font-family: 'ghang_plain_';
   font-size: 80px;
-  margin-top: 80px;
+  margin-top: 35px;
   text-shadow: -4px 6px 3px #000;
   -webkit-text-fill-color: #fff;
     -webkit-text-stroke-color: #a4a4a4;
@@ -50,8 +56,9 @@ h1.eztitle{
 }
 
 div.jumbotron{
-  width: 400px;
+  width: 600px;
   margin-top: 30px;
+  padding-top: 10px;
   background-image: url(grey_wash_wall.png);
   margin-right: auto;
   margin-left: auto;
@@ -63,8 +70,8 @@ div.jumbotron{
 }
 
 div.container{
-  width: 335px;
-  margin-top: 20px;
+  width: 535px;
+  margin-top: 0px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -109,7 +116,7 @@ div.toggle.btn.btn-primary{
     0%   {border-color: red;}
     25%  {border-color: yellow;}
     50%  {border-color: blue;}
-    100% {border-color: green;}
+    100% {border-color: #7FFF00;}
 }
 
 /* Standard syntax */
@@ -117,5 +124,5 @@ div.toggle.btn.btn-primary{
     0%   {border-color: red;}
     25%  {border-color: yellow;}
     50%  {border-color: blue;}
-    100% {border-color: green;}
+    100% {border-color: #7FFF00;}
 }
