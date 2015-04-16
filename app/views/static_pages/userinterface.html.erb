@@ -210,8 +210,7 @@
           <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_16">
         </p>
      <p>
-      <button type="button" data-switch-set="state" data-switch-value="false" class="btn btn-default">Reset</button>
-
+      <button class="btn btn-primary" onclick="toggleOffByInput()">Reset</button>
     </p>
    
   </div>
@@ -254,7 +253,11 @@ $(function(){
     }, 7500);
 })   
 
+function toggleOffByInput() {
+    $('.songs').prop('checked', false).change()
 
+
+  }
 
 </script>
 
