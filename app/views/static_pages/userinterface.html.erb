@@ -55,9 +55,9 @@
           <%= audio_tag "riffs/organ-riff.mp3", class: "audio-play", id:"3_4_sound" %>
           <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_4">
           <%= audio_tag "riffs/saw-plucked.mp3", class: "audio-play", id:"3_5_sound" %>
+          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_5">
 
         </div>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_5">
         </p>
 
 
@@ -88,8 +88,9 @@
         </p>
      <p>
       <button class="clear btn btn-lg btn-default">Clear</button>
+  
+      <button class="btn btn-lg btn-default">Save this sound!</button>
     </p>
-   
   </div>
 </div>
 
@@ -98,23 +99,35 @@
 </body>
 
 <script type="text/javascript">
-  
-  $(function() {
+ 
+$(function(){
     $('#toggle-one').bootstrapToggle();
-  })
-</script>
+    function get_audio_element(native_div){
+      var $div = $(native_div);
+      var $checkbox = $div.find('input');
+      var id = $checkbox.attr('id');
+      return $("#"+id+"_sound");
+    };
 
-<script type="text/javascript">
-  
-$( document ).ready(function() {
-  $(".songs").on("click", function() {
-    var id = event.target.id;
-    $("#"+id+"_sound")[0].currentTime = 0;
-    return $("#"+id+"_sound")[0].play();
-  });
-});  
-  
-   
+    $("div.toggle").on("click", function(event) {
+      var $div = $(this);
+      var $audio_element = get_audio_element(this);
+
+      if (!$div.hasClass('off')){
+        $audio_element[0].pause();
+        $audio_element[0].currentTime = 0; 
+      }
+    });
+
+    setInterval(function() {
+      // play_toggled_sounds();
+      $("div.toggle:not(.off)").each(function(){
+        var $audio = get_audio_element(this);
+        $audio[0].currentTime = 0;
+        $audio[0].play();
+      });
+    }, 7500);
+})   
 
 
 
