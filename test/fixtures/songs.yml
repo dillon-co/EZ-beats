@@ -3,7 +3,9 @@
 one:
   title: MyString
   author: MyString
+  user_id: 1
 
 two:
   title: MyString
   author: MyString
+  user_id: 2

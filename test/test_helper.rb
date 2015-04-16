@@ -5,8 +5,13 @@ require "minitest/reporters"
 Minitest::Reporters.use!
 
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
+  # include Warden::Test::Helpers
+  # include Devise::TestHelpers
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+end
+
+class ActionController::TestCase
+  include Devise::TestHelpers
 end
