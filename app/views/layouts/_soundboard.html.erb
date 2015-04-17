@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Soundboard Interface</title>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 
   <!-- Toggle button links -->
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 
 
       <p id="songs">
-          <%= audio_tag "melodies", class: "audio-play", id:"1_1_sound" %>
+          <%= audio_tag "melodies/anxiety-drop.mp3", class: "audio-play", id:"1_1_sound" %>
           <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_1">
           <%= audio_tag "melodies/piano_4.mp3", class: "audio-play", id:"1_2_sound" %>
           <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_2">
@@ -88,6 +88,7 @@
         </p>
      <p>
       <button class="clear btn btn-lg btn-default">Clear</button>
+      <button class="clear btn btn-lg btn-default" id="save">Save</button>
     </p>
 
   </div>
@@ -98,6 +99,7 @@
 </body>
 
 <script type="text/javascript">
+
 
 $(function(){
     $('#toggle-one').bootstrapToggle();
@@ -118,14 +120,31 @@ $(function(){
     });
 
     setInterval(function() {
-      // play_toggled_sounds();
+      //play_toggled_sounds();
       $("div.toggle:not(.off)").each(function(){
         var $audio = get_audio_element(this);
         $audio[0].currentTime = 0;
         $audio[0].play();
       });
     }, 7500);
-})
+
+    
+    $("#save").on("click", function(event) { 
+      var $onTracks = [];
+      var $mix = [];
+      $("div.toggle:not(.off)").each(function() {
+          $mix.push(get_audio_element(this));
+          $onTracks.push($mix);
+          console.log($onTracks);
+        });
+    });    
+      
+
+//   $('div.toggle').each(function(){
+//     console.log(this);
+//   });
+});
+
 </script>
 
 
