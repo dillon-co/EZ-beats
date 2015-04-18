@@ -207,7 +207,7 @@
      <p>
 
 
-      <button class="btn btn-primary" onclick="toggleOffByInput()">Reset</button>
+      <button id="reset" class="btn btn-primary" onclick="toggleOffByInput()">Reset</button>
 
     </p>
   </div>
@@ -251,10 +251,25 @@ $(function(){
 })   
 
 function toggleOffByInput() {
-    $('.songs').prop('checked', false).change()
+  $('.songs').prop('checked', false).change();
+}
+
+// function toggleOffByInput() {
 
 
-  }
+//   $('.songs').prop('checked', false).change();
+//   $(function(event) { 
+//      var $onTracks = [];
+//      $("div.toggle:not(.off)").each(function() {
+//          $onTracks.push(get_audio_element(this)[0]);
+//          $.each[$onTracks], function( index, value ) {
+//           value[0].pause();
+//          };
+//   });
+
+//        });
+//      console.log($onTracks[0]);
+//    });
 
 </script>
 

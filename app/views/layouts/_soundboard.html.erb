@@ -224,6 +224,10 @@
 </body>
 
 
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+
 
 <script type="text/javascript">
  
@@ -252,15 +256,21 @@ $(function(){
         var $audio = get_audio_element(this);
         $audio[0].currentTime = 0;
         $audio[0].play();
+        // $onTracks.push($audio[0])
       });
+      // console.log($onTracks);
+      // console.log(typeof($onTracks[0]));
+      // console.log();
     }, 7500);
 })   
 
 function toggleOffByInput() {
-    $('.songs').prop('checked', false).change()
+    $('.songs').prop('checked', false).change();
 
 
-  }
+  };
+
+});
 
 </script>
 
