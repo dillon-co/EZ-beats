@@ -24,9 +24,15 @@ body{
   background-image: url(shattered.png);
 
 }
+h5{
+  color: rgb(97, 97, 97);
+  font-size: 30px;
+  background-color: transparent;
+  text-shadow: rgb(168, 163, 163) 1px 1px 0px;
+}
 
 p{
-  width: 315px;
+  width: 550px;
 }
 
 h1.eztitle{
@@ -34,11 +40,11 @@ h1.eztitle{
   color: white;
   font-family: 'ghang_plain_';
   font-size: 80px;
-  margin-top: 80px;
+  margin-top: 35px;
   text-shadow: -4px 6px 3px #000;
   -webkit-text-fill-color: #fff;
-    -webkit-text-stroke-color: #a4a4a4;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #2F0A7F;
+    -webkit-text-stroke-width: 2px;
     text-fill-color: #fff;
     text-stroke-color: #a4a4a4;
     text-stroke-width: 1px;
@@ -50,20 +56,22 @@ h1.eztitle{
 }
 
 div.jumbotron{
-  width: 400px;
+  width: 600px;
   margin-top: 30px;
+  padding-top: 10px;
   background-image: url(grey_wash_wall.png);
   margin-right: auto;
   margin-left: auto;
   border-radius: 10px;
-  -webkit-box-shadow: 0 30px 15px -6px black;
-     -moz-box-shadow: 0 30px 15px -6px black;
-          box-shadow: 0 30px 15px -6px black;
-   /*box-shadow: 1px 20px 15px #000;*/
+  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+   
 }
 
 div.container{
-  width: 335px;
+  width: 535px;
+  margin-top: 0px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -108,7 +116,7 @@ div.toggle.btn.btn-primary{
     0%   {border-color: red;}
     25%  {border-color: yellow;}
     50%  {border-color: blue;}
-    100% {border-color: green;}
+    100% {border-color: #7FFF00;}
 }
 
 /* Standard syntax */
@@ -116,5 +124,5 @@ div.toggle.btn.btn-primary{
     0%   {border-color: red;}
     25%  {border-color: yellow;}
     50%  {border-color: blue;}
-    100% {border-color: green;}
+    100% {border-color: #7FFF00;}
 }
