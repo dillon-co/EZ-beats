@@ -1,25 +1,34 @@
 Rails.application.routes.draw do
 
-  get 'users/profile'
+
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
   get 'users/show'
-
   get 'users/index'
+
 
   root 'static_pages#userinterface'
 
  
 
 
+
   get 'about' => 'infopages#aboutus'
   get 'contact' => 'infopages#contact'
   get 'songs' => 'songs#index'
-
-  resources :songs
-
-  devise_for :users, :controllers => { registrations: 'registrations' }
-  resources :users, only: [:show, :index]
   get 'profile', to: 'users#profile', as: :profile
+
+  resources :users, only: [:show, :index]
+  resources :relationships, only: [:create, :destroy]
+  resources :songs
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

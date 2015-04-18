@@ -12,8 +12,7 @@ class UsersControllerTest < ActionController::TestCase
 
   test 'profile redirect when not signed in' do
     get :profile
-    assert_response 302 # new_user_session_path
-    # assert_template :root # new_user_session_path
+    assert_response 302 
   end
 
 
@@ -31,8 +30,6 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test "should get index when signed in" do
-    # get :index
-    # assert_redirected_to new_user_session_path
     sign_in :user, @user
     get :index
     assert_response :success
