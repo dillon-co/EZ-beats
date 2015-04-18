@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'users/index'
 
-  root 'static_pages#home'
+  root 'static_pages#userinterface'
 
   get 'about' => 'infopages#aboutus'
   get 'contact' => 'infopages#contact'
