@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
+  # get 'mixes/new'
+
+  get "/" => 'mixes#new', as: 'root'
+
   get 'users/profile'
 
   get 'users/show'
 
   get 'users/index'
 
-  root 'static_pages#home'
-
- 
+  # root 'static_pages#home'
 
 
   get 'about' => 'infopages#aboutus'

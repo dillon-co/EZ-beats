@@ -1,0 +1,7 @@
+<div class="container">
+  <%= form_for :new_mix_path do |f| %>
+    <%= render partial:"layouts/soundboard", form: f %>
+    <% if  %>
+      <%= f.submit, class: "btn btn-default", disabled: !(current_user && current_user.signed_in?) %> 
+    <% end %>
+</div>

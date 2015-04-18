@@ -84,7 +84,7 @@
           <%= audio_tag "bass/house.mp3", class: "audio-play", id:"5_4_sound" %>
           <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_4">
           <%= audio_tag "bass/bass-clean.mp3", class: "audio-play", id:"5_5_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_5">
+          <input type="checkbox" data-toggle="toggle" checked=mix.is_checked?("5_5_sound") class="songs btn btn-lg btn-primary" id="5_5">
         </p>
      <p>
       <button class="clear btn btn-lg btn-default">Clear</button>
@@ -99,10 +99,6 @@
 </body>
 
 <script type="text/javascript">
-
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
 
 
 $(function(){
@@ -124,31 +120,14 @@ $(function(){
     });
 
     setInterval(function() {
-      //play_toggled_sounds();
       $("div.toggle:not(.off)").each(function(){
         var $audio = get_audio_element(this);
         $audio[0].currentTime = 0;
         $audio[0].play();
-        // $onTracks.push($audio[0])
       });
-      // console.log($onTracks);
-      // console.log(typeof($onTracks[0]));
-      // console.log();
+      
     }, 7500);
 
-    
-    $("#save").on("click", function(event) { 
-      var $onTracks = [];
-      $("div.toggle:not(.off)").each(function() {
-          $onTracks.push(get_audio_element(this)[0]);
-        });
-      console.log($onTracks);
-    });    
-      
-
-//   $('div.toggle').each(function(){
-//     console.log(this);
-//   });
 });
 
 </script>
