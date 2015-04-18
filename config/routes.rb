@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
+  post 'profile', to: 'users#profile', as: :profile
+
+
   get 'about' => 'infopages#aboutus'
   get 'contact' => 'infopages#contact'
   get 'songs' => 'songs#index'
