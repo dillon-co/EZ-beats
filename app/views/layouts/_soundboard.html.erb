@@ -21,41 +21,41 @@
 
       <p id="songs">
           <%= audio_tag "melodies/anxiety-drop.mp3", class: "audio-play", id:"1_1_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_1">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_1_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_1" %>
           <%= audio_tag "melodies/piano_4.mp3", class: "audio-play", id:"1_2_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_2">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_2_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_2" %>
           <%= audio_tag "melodies/trance_melody.mp3", class: "audio-play", id:"1_3_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_3">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_3" %>
           <%= audio_tag "melodies/moar-chords.mp3", class: "audio-play", id:"1_4_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_4">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_4_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_4" %>
           <%= audio_tag "melodies/piano_1.mp3", class: "audio-play", id:"1_5_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_5">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_5_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_5" %>
         </p>
 
         <p id="songs">
           <%= audio_tag "leads/big-room-house.mp3", class: "audio-play", id:"2_1_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_1">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_1_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_1" %>
           <%= audio_tag "leads/big-room-house_1.mp3", class: "audio-play", id:"2_2_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_2">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_2_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_2" %>
           <%= audio_tag "leads/electro-lead.mp3", class: "audio-play", id:"2_3_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_3">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_3" %>
           <%= audio_tag "leads/pluck-lead.mp3", class: "audio-play", id:"2_4_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_4">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_3" %>
           <%= audio_tag "leads/vibrato-synth.mp3", class: "audio-play", id:"2_5_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_5">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_3" %>
         </p>
 
         <div id="songs">
           <%= audio_tag "riffs/EDM-chords.mp3", class: "audio-play", id:"3_1_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_1">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_1_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_1" %>
           <%= audio_tag "riffs/electric-loop.mp3", class: "audio-play", id:"3_2_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_2">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_2_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_2" %>
           <%= audio_tag "riffs/on-the-house.mp3", class: "audio-play", id:"3_3_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_3">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_3" %>
           <%= audio_tag "riffs/organ-riff.mp3", class: "audio-play", id:"3_4_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_4">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_4_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_4" %>
           <%= audio_tag "riffs/saw-plucked.mp3", class: "audio-play", id:"3_5_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_5">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_5_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_5" %>
 
         </div>
         </p>
@@ -63,28 +63,29 @@
 
         <p id="songs">
           <%= audio_tag "beats/beat-box.mp3", class: "audio-play", id:"4_1_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_1">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_1_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_1" %>
+          <!-- <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_1"> -->
           <%= audio_tag "beats/herman-beatbox.mp3", class: "audio-play", id:"4_2_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_2">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_2_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_2" %>
           <%= audio_tag "beats/house-beats.mp3", class: "audio-play", id:"4_3_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_3">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_3" %>
           <%= audio_tag "beats/kick-and-claps.mp3", class: "audio-play", id:"4_4_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_4">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_4_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_4" %>
           <%= audio_tag "beats/psy.mp3", class: "audio-play", id:"4_5_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_5">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_5_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_5" %>
         </p>
 
         <p id="songs">
           <%= audio_tag "bass/believe.mp3", class: "audio-play", id:"5_1_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_1">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("5_1_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"5_1" %>
           <%= audio_tag "bass/anthem-bass.mp3", class: "audio-play", id:"5_2_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_2">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("5_2_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"5_2" %>
           <%= audio_tag "bass/infectious.mp3", class: "audio-play", id:"5_3_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_3">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("5_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"5_3" %>
           <%= audio_tag "bass/house.mp3", class: "audio-play", id:"5_4_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_4">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("5_4_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"5_4" %>
           <%= audio_tag "bass/bass-clean.mp3", class: "audio-play", id:"5_5_sound" %>
-          <input type="checkbox" data-toggle="toggle" checked=mix.is_checked?("5_5_sound") class="songs btn btn-lg btn-primary" id="5_5">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("5_5_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"5_5" %>
         </p>
      <p>
       <button class="clear btn btn-lg btn-default">Clear</button>
