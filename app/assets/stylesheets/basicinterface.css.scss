@@ -1,4 +1,25 @@
-@font-face {
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "font-awesome";
+ 
+
+ @font-face {
     font-family: 'ghang_plain_';
     src: url('ghang_plain-webfont.eot');
     src: url('ghang_plain-webfont.eot?#iefix') format('embedded-opentype'),
@@ -21,42 +42,48 @@
 
 body{
   /*height: 100%;*/
-  background-image: url(shattered.png);
+  background-image: url(brick-wall.jpg);
 
 }
 h5{
-  color: rgb(97, 97, 97);
-  font-size: 30px;
+  color: rgb(47, 47, 47);
+  font-size: 20px;
   background-color: transparent;
   text-shadow: rgb(168, 163, 163) 1px 1px 0px;
 }
 
 p{
-  width: 550px;
+  width: 635px;
 }
 
+
+
+
+
 h1.eztitle{
+  width: 700px;
   text-align: center;
-  color: white;
+  background-color: rgba(255, 202, 6, .9);
   font-family: 'ghang_plain_';
   font-size: 80px;
-  margin-top: 35px;
+  margin-top: -20px;
   text-shadow: -4px 6px 3px #000;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: white;
     -webkit-text-stroke-color: #2F0A7F;
     -webkit-text-stroke-width: 2px;
-    text-fill-color: #fff;
+    text-fill-color: white;
     text-stroke-color: #a4a4a4;
     text-stroke-width: 1px;
 }
 
-.jumbotron h1{
+
+#board.jumbotron h1{
   color: white;
   font-family: 'ghang_plain_';
 }
 
 div.jumbotron{
-  width: 600px;
+  width: 700px;
   margin-top: 30px;
   padding-top: 10px;
   background-image: url(grey_wash_wall.png);
@@ -70,11 +97,48 @@ div.jumbotron{
 }
 
 div.container{
-  width: 535px;
+  width: 662px;
   margin-top: 0px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0;
 }
+
+.container .jumbotron, .container-fluid .jumbotron{
+
+  padding-left: 25px;
+  padding-top: 20px;
+ 
+}
+
+.up.col-md-4 {
+  padding: 30px;
+  width: 350px;
+  height: 400px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+}
+
+.up.col-md-8 {
+  padding: 30px;
+  width: 630px;
+  height: 400px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+}
+
+.up.container{
+  width: 980px;
+}
+
 
 span.toggle-handle{
   display: none;
@@ -88,7 +152,7 @@ label.toggle-off.btn{
 
 label.toggle-on.btn{
   padding-right: 15px;
-  padding-top: 13px;
+  padding-top: 6px;
   background-color: #a2a2a2;
   border-color: #FF00E7;
 }
@@ -100,7 +164,7 @@ div.toggle.btn{
 
 div.toggle.btn.btn-primary{
   border-color: #44FF1B;
-  border-width: 2px;
+  border-width: 7.5px;
 
   -webkit-animation-name: example; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */

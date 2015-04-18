@@ -1,17 +1,27 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-4">
-			<h2>My Profile</h2>
-			<%= image_tag @user.avatar.url(:medium) %>
-			<h3>Name: <%= @user.first_name%> <%= @user.last_name %></h3>
-			<h3>Email: <%= @user.email%></h3>
-			<section class="stats">
-				<%= render 'users/stats' %>
-				<%= render 'users/follow_form' if signed_in? %>
-			</section>
-		</div>
-		<div class="col-md-8">
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="assets/stylesheets/basicinterface.css.scss">
+</head>
+<body>
 
-		</div>
-	</div>
+    <div class="up container">
+    	<div class="row">
+    		<div class="up col-md-4">
+    			<h1>My Profile</h1>
+    			<%= image_tag @user.avatar.url(:medium) %>
+    			<h3>Name: <%= @user.first_name%> <%= @user.last_name %></h3>
+    			<h3>Email: <%= @user.email%></h3>
+    			<section class="stats">
+    				<%= render 'users/stats' %>
+    				<%= render 'users/follow_form' if signed_in? %>
+    			</section>
+    		</div>
+    		<div class="up col-md-8">
+
+    		</div>
+    	</div>
 </div>
+</body>
+</html>
