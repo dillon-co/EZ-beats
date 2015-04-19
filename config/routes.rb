@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'users/show'
   get 'users/index'
 
+  # root 'static_pages#userinterface'
+
 
   # root 'static_pages#home'
 
