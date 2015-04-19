@@ -3,13 +3,19 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 
+  # get 'mixes/new'
+
+  get "/" => 'mixes#new', as: 'root'
+
+  get 'users/profile'
+
+
   get 'users/show'
   get 'users/index'
 
+  # root 'static_pages#userinterface'
 
-  root 'static_pages#userinterface'
-
- 
+  # root 'static_pages#home'
 
 
 

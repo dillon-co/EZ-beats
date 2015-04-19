@@ -1,5 +1,7 @@
 class Song < ActiveRecord::Base
   belongs_to :user
+  include PublicActivity::Model
+  tracked
 
   def combine_songs(*args)
     args.each do |song|
@@ -9,6 +11,6 @@ class Song < ActiveRecord::Base
      end
     # output = @s.write(args.each)
     # puts output.inspect
-  end 
+  end
 
 end
