@@ -22,196 +22,200 @@
       
       <h5>Melodies</h5>
       <p id="songs">
-          <%= audio_tag "melodies/anxiety-drop.mp3", class: "audio-play", id:"1_1_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_1">
-          <%= audio_tag "melodies/piano_4.mp3", class: "audio-play", id:"1_2_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_2">
-          <%= audio_tag "melodies/trance_melody.mp3", class: "audio-play", id:"1_3_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_3">
-          <%= audio_tag "melodies/moar-chords.mp3", class: "audio-play", id:"1_4_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_4">
-          <%= audio_tag "melodies/piano_1.mp3", class: "audio-play", id:"1_5_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_5">
-          <%= audio_tag "#", class: "audio-play", id:"1_6_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_6">
-          <%= audio_tag "#", class: "audio-play", id:"1_7_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_7">
+          <%= audio_tag "leads/big-room-house.mp3", class: "audio-play", id:"1_1_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_1_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_1" %>
+          <%= audio_tag "leads/big-room-house_1.mp3", class: "audio-play", id:"1_2_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_2_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_2" %>
+          <%= audio_tag "melodies/anxiety-drop.mp3", class: "audio-play", id:"1_3_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_3" %>
+          <%= audio_tag "melodies/piano_4.mp3", class: "audio-play", id:"1_4_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_4_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_4" %>
+          <%= audio_tag "melodies/trance_melody.mp3", class: "audio-play", id:"1_5_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_5_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_5" %>
+          <%= audio_tag "melodies/moar-chords.mp3", class: "audio-play", id:"1_6_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_6_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_6" %>
+          <%= audio_tag "melodies/piano_1.mp3", class: "audio-play", id:"1_7_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_7_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_7" %>        
           <%= audio_tag "#", class: "audio-play", id:"1_8_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_8">
-          <%= audio_tag "leads/big-room-house.mp3", class: "audio-play", id:"2_1_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_1">
-          <%= audio_tag "leads/big-room-house_1.mp3", class: "audio-play", id:"2_2_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_2">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_8_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_8" %>  
+          <%= audio_tag "#", class: "audio-play", id:"1_9_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_9_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_9" %>    
+          <%= audio_tag "#", class: "audio-play", id:"1_10_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_10_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_10" %>   
+
         </p>
         <p id="songs">
-          <%= audio_tag "#", class: "audio-play", id:"1_9_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_9">
-          <%= audio_tag "#", class: "audio-play", id:"1_10_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_10">
-          <%= audio_tag "#", class: "audio-play", id:"1_11_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_11">
-          <%= audio_tag "#", class: "audio-play", id:"1_12_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_12">
+          <%= audio_tag "leads/electro-lead.mp3", class: "audio-play", id:"1_11_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_11_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_11" %>
+          <%= audio_tag "leads/pluck-lead.mp3", class: "audio-play", id:"1_12_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_12_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_12" %>
           <%= audio_tag "#", class: "audio-play", id:"1_13_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_13">
-          <%= audio_tag "#", class: "audio-play", id:"1_14_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_14">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_13_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_13" %>          
+          <%= audio_tag "#", class: "audio-play", id:"1_17_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_14_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_14" %>
           <%= audio_tag "#", class: "audio-play", id:"1_15_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_15">
-          <%= audio_tag "leads/electro-lead.mp3", class: "audio-play", id:"2_3_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_3">
-          <%= audio_tag "leads/pluck-lead.mp3", class: "audio-play", id:"2_4_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_4">
-          <%= audio_tag "leads/vibrato-synth.mp3", class: "audio-play", id:"2_5_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_5">
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_15_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_15" %>
+          <%= audio_tag "#", class: "audio-play", id:"1_16_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_16_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_16" %>
+          <%= audio_tag "#", class: "audio-play", id:"1_17_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_17_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_17" %>
+          <%= audio_tag "#", class: "audio-play", id:"1_18_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_18_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_18" %>
+          <%= audio_tag "#", class: "audio-play", id:"1_19_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_19_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_19" %>
+          <%= audio_tag "#", class: "audio-play", id:"1_20_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("1_20_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"1_20" %>
         </p>
 
         
 
         <h5>Riffs</h5>
         <p id="songs">
-          <%= audio_tag "riffs/EDM-chords.mp3", class: "audio-play", id:"3_1_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_1">
-          <%= audio_tag "riffs/electric-loop.mp3", class: "audio-play", id:"3_2_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_2">
-          <%= audio_tag "riffs/on-the-house.mp3", class: "audio-play", id:"3_3_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_3">
-          <%= audio_tag "riffs/organ-riff.mp3", class: "audio-play", id:"3_4_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_4">
-          <%= audio_tag "riffs/saw-plucked.mp3", class: "audio-play", id:"3_5_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_5">
-          <%= audio_tag "#", class: "audio-play", id:"3_6_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_6">
-          <%= audio_tag "#", class: "audio-play", id:"3_7_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_7">
-          <%= audio_tag "#", class: "audio-play", id:"3_8_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_8">
-          <%= audio_tag "#", class: "audio-play", id:"1_16_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="1_16">
-          <%= audio_tag "#", class: "audio-play", id:"2_6_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_6">
+          <%= audio_tag "leads/vibrato-synth.mp3", class: "audio-play", id:"2_1_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_1_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_1" %>
+          <%= audio_tag "#", class: "audio-play", id:"2_2_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_2_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_2" %>
+          <%= audio_tag "riffs/EDM-chords.mp3", class: "audio-play", id:"2_3_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_3" %>
+          <%= audio_tag "riffs/electric-loop.mp3", class: "audio-play", id:"2_4_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_4_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_4" %>
+          <%= audio_tag "riffs/on-the-house.mp3", class: "audio-play", id:"2_5_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_5_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_5" %>
+          <%= audio_tag "riffs/organ-riff.mp3", class: "audio-play", id:"2_6_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_6_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_6" %>
+          <%= audio_tag "riffs/saw-plucked.mp3", class: "audio-play", id:"2_7_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_7_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_7" %>          
+          <%= audio_tag "#", class: "audio-play", id:"2_8_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_8_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_8" %>          
+          <%= audio_tag "#", class: "audio-play", id:"2_9_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_9_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_9" %>          
+          <%= audio_tag "#", class: "audio-play", id:"2_10_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_10_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_10" %>        
         </p>
         <p id="songs">
-          <%= audio_tag "#", class: "audio-play", id:"3_9_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_9">
-          <%= audio_tag "#", class: "audio-play", id:"3_10_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_10">
-          <%= audio_tag "#", class: "audio-play", id:"3_11_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_11">
-          <%= audio_tag "#", class: "audio-play", id:"3_12_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_12">
-          <%= audio_tag "#", class: "audio-play", id:"3_13_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_13">
-          <%= audio_tag "#", class: "audio-play", id:"3_14_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_14">
-          <%= audio_tag "#", class: "audio-play", id:"3_15_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_15">
-          <%= audio_tag "#", class: "audio-play", id:"3_16_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="3_16">
-          <%= audio_tag "#", class: "audio-play", id:"2_7_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_7">
-          <%= audio_tag "#", class: "audio-play", id:"2_8_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_8">
+          <%= audio_tag "#", class: "audio-play", id:"2_11_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_11_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_11" %>
+          <%= audio_tag "#", class: "audio-play", id:"2_12_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_12_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_12" %>
+          <%= audio_tag "#", class: "audio-play", id:"2_13_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_13_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_13" %>         
+          <%= audio_tag "#", class: "audio-play", id:"2_14_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_14_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_14" %>
+          <%= audio_tag "#", class: "audio-play", id:"2_15_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_15_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_15" %>
+          <%= audio_tag "#", class: "audio-play", id:"2_16_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_16_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_16" %>
+          <%= audio_tag "#", class: "audio-play", id:"2_17_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_17_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_17" %>
+          <%= audio_tag "#", class: "audio-play", id:"2_18_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_18_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_18" %>
+          <%= audio_tag "#", class: "audio-play", id:"2_19_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_19_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_19" %>
+          <%= audio_tag "#", class: "audio-play", id:"2_20_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("2_20_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"2_20" %>
         </p>
 
         <h5>Beats</h5>
         <p id="songs">
-          <%= audio_tag "beats/beat-box.mp3", class: "audio-play", id:"4_1_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_1">
-          <%= audio_tag "beats/herman-beatbox.mp3", class: "audio-play", id:"4_2_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_2">
-          <%= audio_tag "beats/house-beats.mp3", class: "audio-play", id:"4_3_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_3">
-          <%= audio_tag "beats/kick-and-claps.mp3", class: "audio-play", id:"4_4_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_4">
-          <%= audio_tag "beats/psy.mp3", class: "audio-play", id:"4_5_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_5">
-          <%= audio_tag "#", class: "audio-play", id:"4_6_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_6">
-          <%= audio_tag "#", class: "audio-play", id:"4_7_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_7">
-          <%= audio_tag "#", class: "audio-play", id:"4_8_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_8">
-          <%= audio_tag "#", class: "audio-play", id:"2_9_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_9">
-          <%= audio_tag "#", class: "audio-play", id:"2_10_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_10">
+          <%= audio_tag "beats/beat-box.mp3", class: "audio-play", id:"3_1_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_1_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_1" %>
+          <%= audio_tag "beats/herman-beatbox.mp3", class: "audio-play", id:"3_2_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_2_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_2" %>
+          <%= audio_tag "beats/house-beats.mp3", class: "audio-play", id:"3_3_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_3" %>
+          <%= audio_tag "beats/kick-and-claps.mp3", class: "audio-play", id:"3_4_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_4_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_4" %>
+          <%= audio_tag "beats/psy.mp3", class: "audio-play", id:"3_5_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_5_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_5" %>          
+          <%= audio_tag "#", class: "audio-play", id:"3_6_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_6_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_6" %>          
+          <%= audio_tag "#", class: "audio-play", id:"3_7_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_7_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_7" %>          
+          <%= audio_tag "#", class: "audio-play", id:"3_8_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_8_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_8" %> 
+          <%= audio_tag "#", class: "audio-play", id:"3_9_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_9_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_9" %>        
+          <%= audio_tag "#", class: "audio-play", id:"3_10_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_10_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_10" %>               
         </p>
         <p id="songs">
-          <%= audio_tag "#", class: "audio-play", id:"4_9_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_9">
-          <%= audio_tag "#", class: "audio-play", id:"4_10_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_10">
-          <%= audio_tag "#", class: "audio-play", id:"4_11_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_11">
-          <%= audio_tag "#", class: "audio-play", id:"4_12_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_12">
-          <%= audio_tag "#", class: "audio-play", id:"4_13_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_13">
-          <%= audio_tag "#", class: "audio-play", id:"4_14_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_14">
-          <%= audio_tag "#", class: "audio-play", id:"4_15_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_15">
-          <%= audio_tag "#", class: "audio-play", id:"4_16_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="4_16">
-          <%= audio_tag "#", class: "audio-play", id:"2_11_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_11">
-          <%= audio_tag "#", class: "audio-play", id:"2_12_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_12">
+          
+          <%= audio_tag "#", class: "audio-play", id:"3_11_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_11_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_11" %>
+          <%= audio_tag "#", class: "audio-play", id:"3_12_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_12_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_12" %>
+          <%= audio_tag "#", class: "audio-play", id:"3_13_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_13_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_13" %>
+          <%= audio_tag "#", class: "audio-play", id:"3_14_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_14_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_14" %>
+          <%= audio_tag "#", class: "audio-play", id:"3_15_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_15_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_15" %>
+          <%= audio_tag "#", class: "audio-play", id:"3_16_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_16_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_16" %>
+          <%= audio_tag "#", class: "audio-play", id:"3_17_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_17_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_17" %>        
+          <%= audio_tag "#", class: "audio-play", id:"3_18_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_18_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_18" %>   
+          <%= audio_tag "#", class: "audio-play", id:"3_19_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_19_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_19" %>          
+          <%= audio_tag "#", class: "audio-play", id:"3_20_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("3_20_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"3_20" %>     
         </p>
 
 
         <h5>Bass</h5>
         <p id="songs">
-          <%= audio_tag "bass/believe.mp3", class: "audio-play", id:"5_1_sound" %>
-          <input  type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_1">
-          <%= audio_tag "bass/anthem-bass.mp3", class: "audio-play", id:"5_2_sound" %>
-          <input  type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_2">
-          <%= audio_tag "bass/infectious.mp3", class: "audio-play", id:"5_3_sound" %>
-          <input  type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_3">
-          <%= audio_tag "bass/house.mp3", class: "audio-play", id:"5_4_sound" %>
-          <input  type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_4">
-          <%= audio_tag "bass/bass-clean.mp3", class: "audio-play", id:"5_5_sound" %>
-          <input  type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_5">
-          <%= audio_tag "#", class: "audio-play", id:"5_6_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_6">
-          <%= audio_tag "#", class: "audio-play", id:"5_7_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_7">
-          <%= audio_tag "#", class: "audio-play", id:"5_8_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_8">
-          <%= audio_tag "#", class: "audio-play", id:"2_13_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_13">
-          <%= audio_tag "#", class: "audio-play", id:"2_14_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_14">
+          <%= audio_tag "bass/believe.mp3", class: "audio-play", id:"4_1_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_1_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_1" %>
+          <%= audio_tag "bass/anthem-bass.mp3", class: "audio-play", id:"4_2_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_2_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_2" %>
+          <%= audio_tag "bass/infectious.mp3", class: "audio-play", id:"4_3_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_3_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_3" %>
+          <%= audio_tag "bass/house.mp3", class: "audio-play", id:"4_4_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_4_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_4" %>
+          <%= audio_tag "bass/bass-clean.mp3", class: "audio-play", id:"4_5_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_5_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_5" %>
+          <%= audio_tag "#", class: "audio-play", id:"4_6_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_6_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_6" %>          
+          <%= audio_tag "#", class: "audio-play", id:"4_7_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_7_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_7" %>          
+          <%= audio_tag "#", class: "audio-play", id:"4_8_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_8_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_8" %> 
+          <%= audio_tag "#", class: "audio-play", id:"4_9_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_9_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_9" %>        
+          <%= audio_tag "#", class: "audio-play", id:"4_10_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_10_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_10" %>               
         </p>
         <p id="songs">
-          <%= audio_tag "#", class: "audio-play", id:"5_9_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_9">
-          <%= audio_tag "#", class: "audio-play", id:"5_10_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_10">
-          <%= audio_tag "#", class: "audio-play", id:"5_11_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_11">
-          <%= audio_tag "#", class: "audio-play", id:"5_12_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_12">
-          <%= audio_tag "#", class: "audio-play", id:"5_13_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_13">
-          <%= audio_tag "#", class: "audio-play", id:"5_14_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_14">
-          <%= audio_tag "#", class: "audio-play", id:"5_15_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_15">
-          <%= audio_tag "#", class: "audio-play", id:"5_16_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="5_16">
-          <%= audio_tag "#", class: "audio-play", id:"2_15_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_15">
-          <%= audio_tag "#", class: "audio-play", id:"2_16_sound" %>
-          <input type="checkbox" data-toggle="toggle" class="songs btn btn-lg btn-primary" id="2_16">
+          <%= audio_tag "#", class: "audio-play", id:"4_11_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_11_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_11" %>          
+          <%= audio_tag "#", class: "audio-play", id:"4_12_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_12_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_12" %>
+          <%= audio_tag "#", class: "audio-play", id:"4_13_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_13_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_13" %>
+          <%= audio_tag "#", class: "audio-play", id:"4_14_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_14_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_14" %>
+          <%= audio_tag "#", class: "audio-play", id:"4_15_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_15_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_15" %>
+          <%= audio_tag "#", class: "audio-play", id:"4_16_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_16_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_16" %>
+          <%= audio_tag "#", class: "audio-play", id:"4_17_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_17_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_17" %>
+          <%= audio_tag "#", class: "audio-play", id:"4_18_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_18_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_18" %>
+          <%= audio_tag "#", class: "audio-play", id:"4_19_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_19_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_19" %>
+          <%= audio_tag "#", class: "audio-play", id:"4_20_sound" %>
+          <%= form.check_box 'on/off', checked: @mix.is_checked?("4_20_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"4_20" %>
         </p>
+     
+     
      <p>
-
-
       <button id="reset" class="btn btn-primary" onclick="toggleOffByInput()">Reset</button>
-
+      <%= form.submit 'Save This Sound!', class: "btn btn-default" %> 
     </p>
+
+
   </div>
 </div>
 
@@ -243,36 +247,19 @@ $(function(){
     });
 
     setInterval(function() {
-      // play_toggled_sounds();
       $("div.toggle:not(.off)").each(function(){
         var $audio = get_audio_element(this);
         $audio[0].currentTime = 0;
         $audio[0].play();
       });
     }, 7500);
-})   
+});   
+
+
 
 function toggleOffByInput() {
   $('.songs').prop('checked', false).change();
-  
-}
 
-// function toggleOffByInput() {
-
-
-//   $('.songs').prop('checked', false).change();
-//   $(function(event) { 
-//      var $onTracks = [];
-//      $("div.toggle:not(.off)").each(function() {
-//          $onTracks.push(get_audio_element(this)[0]);
-//          $.each[$onTracks], function( index, value ) {
-//           value[0].pause();
-//          };
-//   });
-
-//        });
-//      console.log($onTracks[0]);
-//    });
 
 </script>
 
