@@ -1,10 +1,7 @@
  class MixesController < ApplicationController
   
   def new
-  
-    # params = { "mix": { name: 'my awesome mix', 5_3_sound: true, 1_10_sound: true } }
     @mix = Mix.new
-  
   end
 
   def create
