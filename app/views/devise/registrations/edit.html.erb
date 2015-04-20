@@ -1,4 +1,11 @@
-<div class = 'container'>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="assets/stylesheets/basicinterface.css.scss">
+</head>
+<body>
+<div class = 'edit container'>
   <div class = 'col-sm-4'>
     <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
@@ -48,7 +55,7 @@
         <%= f.submit "Update", class: "btn user-btn" %>
       </div>
 
-      <
+     
     <% end %>
 
     <h3>Cancel my account</h3>
@@ -58,3 +65,6 @@
     <%= link_to "Back", :back %>
   </div>
 </div>
+
+</body>
+</html>
