@@ -46,10 +46,10 @@ body{
 
 }
 h5{
-  color: rgb(47, 47, 47);
+  color: rgb(0, 0, 0);
   font-size: 20px;
   background-color: transparent;
-  text-shadow: rgb(168, 163, 163) 1px 1px 0px;
+  text-shadow: rgb(237, 232, 232) 1px 1px 0px;
 }
 
 p{
@@ -138,6 +138,17 @@ div.container{
 .up.container{
   width: 980px;
 }
+.edit.container{
+   padding: 30px;
+  width: 980px;
+  height: 800px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+}
 
 
 span.toggle-handle{
@@ -189,4 +200,8 @@ div.toggle.btn.btn-primary{
     25%  {border-color: yellow;}
     50%  {border-color: blue;}
     100% {border-color: #7FFF00;}
+}
+
+.actions{
+  margin-top: 10px;
 }
