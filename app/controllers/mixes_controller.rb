@@ -7,7 +7,11 @@
   def create
     @mix = Mix.create(mix_params)
     parse_songs(@mix)
-    @mix.save
+    if @mix.songs.save
+      redirect_to user_path
+    else
+      render :new
+    end    
   end  
 
   private
@@ -22,7 +26,7 @@
 
 
   def mix_params
-    params.require(:mix).permit(:name, :checked)
+    params.require(:mix).permit(:name, :checked, :songs)
   end
 
 end

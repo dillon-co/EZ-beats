@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def profile
     @user = current_user
-    @songs = current_user.songs
+    @mixes = current_user.mixes
     @activities = PublicActivity::Activity.all
   end
 

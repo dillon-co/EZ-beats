@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   # get 'mixes/new'
 
   get "/" => 'mixes#new', as: 'root'
+  
+  post "/" => 'mixes#new'
 
+  resources :mixes
+  
   get 'users/profile'
 
 
