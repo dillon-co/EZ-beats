@@ -5,10 +5,14 @@
   end
 
   def create
+    # @new_mix = Mix.find(params[:id])
+    # @mix = Mix.create(:id => @new_mix.id)
+    # @song = Mix.find(params[:])
+    # @songs << @new_mix
     @mix = Mix.create(mix_params)
     parse_songs(@mix)
-    if @mix.songs.save
-      redirect_to user_path
+    if @mix.save
+      redirect_to user_path(current_user)
     else
       render :new
     end    
@@ -17,16 +21,15 @@
   private
 
   def parse_songs(mix)
+    binding.pry
     params[:mix].each do |key, value|
-      if key[/_sound/]
-        mix.songs << key if value
-      end
+        mix.songs << key if value == '1'
     end
   end
 
 
   def mix_params
-    params.require(:mix).permit(:name, :checked, :songs)
+    params.require(:mix).permit(:name, :checked, :songs, :user_id)
   end
 
 end
