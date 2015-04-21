@@ -39,7 +39,10 @@
 }
 
 /* background gradient */
-
+.fa-headphones{
+  color:white;
+  margin-top: 5px;
+}
 body{
   /*height: 100%;*/
   background-image: url(brick-wall.jpg);
@@ -114,7 +117,7 @@ div.container{
 .up.col-md-4 {
   padding: 30px;
   width: 350px;
-  height: 400px;
+  height: 600px;
   margin-bottom: 100px;
   background-color: white;
   border-radius: 10px;
@@ -126,7 +129,7 @@ div.container{
 .up.col-md-8 {
   padding: 30px;
   width: 630px;
-  height: 400px;
+  height: 600px;
   margin-bottom: 100px;
   background-color: white;
   border-radius: 10px;
@@ -150,6 +153,64 @@ div.container{
           box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
 }
 
+.about.container{
+   padding: 30px;
+  width: 980px;
+  height: 800px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+}
+
+.index.container{
+   padding: 30px;
+  width: 980px;
+  height: 800px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+}
+
+.songs.container{
+   padding: 30px;
+  width: 980px;
+  height: 800px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+}
+.login.container{
+   padding: 30px;
+  width: 980px;
+  height: 800px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+}
+
+.signup.container{
+   padding: 30px;
+  width: 980px;
+  height: 800px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+}
 
 span.toggle-handle{
   display: none;
