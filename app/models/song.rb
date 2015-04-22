@@ -1,7 +1,7 @@
 class Song < ActiveRecord::Base
   belongs_to :user
-  include PublicActivity::Model
-  tracked
+  acts_as_likeable
+  acts_as_mentionable
 
   def combine_songs(*args)
     args.each do |song|
