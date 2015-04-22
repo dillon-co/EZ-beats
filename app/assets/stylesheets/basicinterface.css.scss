@@ -67,6 +67,9 @@ h1.eztitle{
   width: 700px;
   text-align: center;
   background-color: rgba(255, 202, 6, .9);
+  -webkit-animation-name: back;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
   font-family: 'ghang_plain_';
   font-size: 80px;
   margin-top: -20px;
@@ -79,6 +82,13 @@ h1.eztitle{
     text-stroke-width: 1px;
 }
 
+@-webkit-keyframes back {
+  0%   {background-color: rgba(6, 249, 255, .9);}
+    25%  {background-color: rgba(6, 255, 43, .9);}
+    50%  {background-color: rgba(255, 68, 6, .9);}
+    100% {background-color: rgba(254, 6, 255, .9);}
+
+}
 
 #board.jumbotron h1{
   color: white;
