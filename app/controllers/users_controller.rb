@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @mixes = Mix.all
     @user = User.find(params[:id])
     @activities = PublicActivity::Activity.all
   end

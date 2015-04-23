@@ -1,0 +1,80 @@
+
+<head>
+  <%= stylesheet_link_tag "application", media: "all" %>
+<%= javascript_include_tag "application" %>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soundboard Interface</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Toggle button links -->
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/basicinterface.css.scss">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+</head>
+
+<body>
+  <h1 class="eztitle">Saved Sounds</h1>
+
+
+    
+<div class="jumbotron">
+  <div class="container">
+<% @mixes.each do |mix| %>
+  
+  <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
+    <% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
+    
+    <% Dir.foreach("#{Dir.getwd}/public/audios/#{folder}").with_index do |song, index| %>
+      <% next if song == '.' || song == '..' || song == '.DS_Store' %>
+      <% next if mix.songs == [] %>
+      <% sound = mix.songs %>
+      <% dir = Dir.chdir("#{Dir.getwd}") %>
+      
+      <% sound.each do |id| %>  
+        <% if id[0].to_i == dir_index && id[2].to_i == index %>
+          <%= audio_tag "#{folder}/#{song}", class: "audio_play", id:"#{id}_sound" %>
+          <%= check_box "#{id}", checked: mix.is_checked?("#{id}_sound"), data: {toggle: 'toggle'}, class: "toggle btn btn-default off", id:"#{id}" %>
+  
+          <% end %>
+        <% end %>
+      <% end %> 
+    <% end %>  
+<% end %> 
+</div>
+
+<script type="text/javascript">
+
+$(function(){
+
+    $('#toggle-one').bootstrapToggle();
+
+    function get_audio_element(native_div){
+      var $div = $(native_div);
+      var $checkbox = $div.find('input');
+      var id = $checkbox.attr('class');
+      return $("#"+id+"_sound");
+    };
+
+    $("div.toggle").on("click", function(event) {
+      var $div = $(this);
+      var $audio_element = get_audio_element(this);
+      if (!$div.hasClass('off')){
+        $audio_element[0].pause();
+        $audio_element[0].currentTime = 0; 
+      }
+    });
+
+    setInterval(function() {
+      $("div.toggle:not(.off)").each(function(){
+        var $audio = get_audio_element(this);
+        $audio[0].currentTime = 0;
+        $audio[0].play();
+      });
+    }, 7500);
+});   
+
+</script>
+</body>
+

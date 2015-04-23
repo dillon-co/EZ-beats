@@ -8,7 +8,7 @@
 
   <!-- Toggle button links -->
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/basicinterface.css.scss">
+
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
 </head>
 
@@ -18,20 +18,17 @@
     <div class="container">
 
 
-
-      <h5>Melodies</h5>
       <p id="songs">
        <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
             <% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
               <% Dir.foreach("#{Dir.getwd}/public/audios/#{folder}").with_index do |song, index| %>
                 <% next if song == '.' || song == '..' || song == '.DS_Store' %>
-                <%= audio_tag "#{folder}/#{song}", class: "audio_play", id:"#{dir_index+1}_#{index+1}_sound" %>
-                <%= form.check_box "#{dir_index+1}_#{index+1}", checked: @mix.is_checked?("#{dir_index+1}_#{index+1}_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"#{dir_index+1}_#{index+1}" %>
+                <%= audio_tag "#{folder}/#{song}", class: "audio_play", id:"#{dir_index}_#{index}_sound" %>
+                <%= form.check_box "#{dir_index}_#{index}", checked: @mix.is_checked?("#{dir_index}_#{index}_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"#{dir_index}_#{index}" %>
             <% end %>   
         <% end %>
         <div>
       <%= form.submit 'Save This Sound!', class: "btn btn-default" %>
-      <%# link_to 'Save This Sound', mix_path(id: id), get: :post %>
     </div>
         </p>
 
@@ -46,7 +43,8 @@
 <script type="text/javascript">
  
 $(function(){
-    $('#toggle-one').bootstrapToggle();
+
+
     function get_audio_element(native_div){
       var $div = $(native_div);
       var $checkbox = $div.find('input');
