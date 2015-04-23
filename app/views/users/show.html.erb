@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="row">
+	<div class="row row-bordered">
 		<div class="col-md-4">
 			<h2><%= @user.first_name%>'s Profile</h2>
 			<%= image_tag @user.avatar.url(:thumb) %>
@@ -8,10 +8,21 @@
 			<section class="stats">
 				<%= render 'users/stats' %>
 				<%= render 'users/follow_form' if signed_in? %>
+				<%= render 'layouts/savedsounds' %>
 			</section>
 		</div>
 		<div class="col-md-8">
-			<%= render_activities(@activities, layout: :activity) %>
+
+			<% @mixes.each do |mix| %>
+			<% if post.user.followed_by?(current_user) || post.share_with == "public" || post.user == current_user %>
+				<h2><%= mix.title %></h2>
+				<% end %>
+			<% end %>
+			<% else %>
+				This user hasn't made any songs.
+
+			<% # render_activities(@activities, layout: :activity) %>
+
 		</div>
 	</div>
 </div>

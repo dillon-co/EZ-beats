@@ -14,6 +14,7 @@ gem 'turbolinks'
 gem 'public_activity'
 gem 'devise'
 gem 'rspec'
+gem 'socialization'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 

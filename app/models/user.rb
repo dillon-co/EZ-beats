@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :songs
+  has_many :mixes
   has_many :active_relationships, class_name:  "Relationship",
                                   foreign_key: "follower_id",
                                   dependent:   :destroy
@@ -15,8 +15,9 @@ class User < ActiveRecord::Base
                                   dependent:   :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
-  include PublicActivity::Model
-  tracked
+  acts_as_liker
+  acts_as_mentionable
+  acts_as_mentioner
 
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)

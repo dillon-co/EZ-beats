@@ -2,11 +2,13 @@ class SongsController < ApplicationController
 before_action :authenticate_user!
 
   def index
+    @user = current_user
     @songs = Song.all
   end
 
   def show
     @song = Song.find(params[:id])
+    @songs = Song.all
   end
 
   def new
