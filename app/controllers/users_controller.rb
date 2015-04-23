@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def profile
     @user = current_user
-    @songs = current_user.songs
+    @songs = Song.where user_id: :id
   end
 
   def show
