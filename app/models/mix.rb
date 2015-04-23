@@ -5,5 +5,5 @@ class Mix < ActiveRecord::Base
   def is_checked?(id)
     songs.include?(id)
   end
-
+  
 end

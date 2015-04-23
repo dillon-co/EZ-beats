@@ -4,9 +4,11 @@ class UsersController < ApplicationController
   def profile
     @user = current_user
     @songs = Song.where user_id: :id
+    @mixes = current_user.mixes
   end
 
   def show
+    @mixes = Mix.all
     @user = User.find(params[:id])
     @songs = Song.where user_id: :id
   end

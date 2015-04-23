@@ -1,4 +1,6 @@
  class MixesController < ApplicationController
+
+  layout "application"
   
   def new
     @mix = Mix.new
@@ -7,22 +9,28 @@
   def create
     @mix = Mix.create(mix_params)
     parse_songs(@mix)
-    @mix.save
+    if @mix.save
+      redirect_to user_path(current_user)
+    else
+      render :new
+    end    
+  end  
+
+  def index
+    @mixes = Mix.all
   end  
 
   private
 
   def parse_songs(mix)
     params[:mix].each do |key, value|
-      if key[/_sound/]
-        mix.songs << key if value
-      end
+        mix.songs << key if value == '1'
     end
   end
 
 
   def mix_params
-    params.require(:mix).permit(:name, :checked)
+    params.require(:mix).permit(:name, :checked, :songs, :user_id)
   end
 
 end
