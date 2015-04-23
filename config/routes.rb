@@ -3,32 +3,22 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 
-  # get 'mixes/new'
-
-  get "/" => 'mixes#new', as: 'root'
-  
+  get '/' => 'mixes#new', as: 'root'
   post "/" => 'mixes#new'
 
-  resources :mixes
-  
+
   get 'users/profile'
 
 
   get 'users/show'
-  get 'users/index'
-
-  # root 'static_pages#userinterface'
-
-
-  # root 'static_pages#home'
-
-
-
+  get 'users' => 'users#index'
   get 'about' => 'infopages#aboutus'
   get 'contact' => 'infopages#contact'
+  post 'infopages/email' => 'infopages#email'
   get 'songs' => 'songs#index'
   get 'profile', to: 'users#profile', as: :profile
 
+  resources :mixes
   resources :users, only: [:show, :index]
   resources :relationships, only: [:create, :destroy]
   resources :songs
