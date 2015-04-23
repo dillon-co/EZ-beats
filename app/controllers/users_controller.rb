@@ -3,10 +3,13 @@ class UsersController < ApplicationController
 
   def profile
     @user = current_user
-    @songs = current_user.songs
+
+    @mixes = current_user.mixes
+    @activities = PublicActivity::Activity.all
   end
 
   def show
+    @mixes = Mix.all
     @user = User.find(params[:id])
     @songs = Song.where user_id: :id
   end
