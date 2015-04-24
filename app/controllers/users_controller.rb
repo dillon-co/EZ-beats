@@ -3,9 +3,8 @@ class UsersController < ApplicationController
 
   def profile
     @user = current_user
-
+    @songs = Song.where user_id: :id
     @mixes = current_user.mixes
-    @activities = PublicActivity::Activity.all
   end
 
   def show
