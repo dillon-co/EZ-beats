@@ -8,7 +8,7 @@
 <% next if mix.songs == [] %>
 <div>    
 
-  <%= link_to "", '#', class: "btn btn-lng btn-lg btn-primary mix_#{mix.id}", onclick: "return false", id:"play" %>
+  <%= link_to "", '#', class: "btn btn-lng btn-lg btn-primary btn-warning mix_#{mix.id}", onclick: "return false", id:"play" %>
 
 
   <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
@@ -18,13 +18,10 @@
       <% next if song == '.' || song == '..' || song == '.DS_Store' %>
       <% next if mix.songs == [] %>
       <% sound = mix.songs %>
-      <% dir = Dir.chdir("#{Dir.getwd}") %>
-      
+
       <% sound.each do |id| %>  
         <% if id[0].to_i == dir_index && id[2].to_i == index %>
-          <%= audio_tag "#{folder}/#{song}", class: "audio_play mix_#{mix.id}_sound", id:"mix_#{mix.id}_sound" %>
-          
-
+          <%= audio_tag "#{folder}/#{song}", class: "audio_play mix_#{mix.id}_sound", id:"#{dir_index}_#{index}" %>
         <% end %>
       <% end %>
     <% end %> 
@@ -39,27 +36,30 @@ $(function(){
 
     function get_audio_element(native_div){
       var $div = $(native_div);
-      var $checkbox = $div.find('input');
-      var id = $checkbox.attr('class');
-      return $("#mix_"+id+"_sound");
+      var $id = $div.attr('class');
+      $.each( $('audio'), function() {
+        if ($(this).attr('class').split('audio_play ')[1] == $div.attr('class').split('btn-warning ')[1] + "_sound"){
+          return $(this);
+        };
+      });
     };
 
 
-    $("#play").on("click", function(event) {
-      var $div = $(this);
-      var $audio_element = get_audio_element(this);
-      if ($audio_element.play() == true){
-        $audio_element[0].pause();
-        $audio_element[0].currentTime = 0; 
-      }
-    });
+    // $("#play").on("click", function(event) {
+    //   var $div = $(this);
+    //   var $audio_element = get_audio_element(this);
+    //   if ($audio_element.play() == true){
+    //     $audio_element[0].pause();
+    //     $audio_element[0].currentTime = 0; 
+    //   }
+    // });
 
 
     $(function() {
       $("#play").on("click", function(event){
         var $audio = get_audio_element(this);
-        $audio[0].currentTime = 0;
-        $audio[0].play();
+        $audio.all.currentTime = 0;
+        $audio.all.play();
       });
     });
 });   

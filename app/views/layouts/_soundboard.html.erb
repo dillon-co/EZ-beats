@@ -46,7 +46,6 @@ $(function(){
     $("div.toggle").on("click", function(event) {
       var $div = $(this);
       var $audio_element = get_audio_element(this);
-
       if (!$div.hasClass('off')){
         $audio_element[0].pause();
         $audio_element[0].currentTime = 0; 

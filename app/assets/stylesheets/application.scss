@@ -110,8 +110,8 @@ label.toggle-off.btn{
 label.toggle-on.btn{
   padding-right: 15px;
   padding-top: 13px;
-  background-color: #a2a2a2;
-  border-color: #FF00E7;
+  background-color: orange;
+  // border-color: #FF00E7;
 }
 
 div.toggle.btn{
@@ -120,15 +120,15 @@ div.toggle.btn{
 }
 
 div.toggle.btn.btn-primary{
-  border-color: #44FF1B;
-  border-width: 7px;
+  // border-color: warning;
+  // border-width: 7px;
 
-  -webkit-animation-name: example; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
-    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
-    animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+  // -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  //   -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+  //   -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+  //   animation-name: example;
+  //   animation-duration: 4s;
+  //   animation-iteration-count: infinite;
 
 }
 
