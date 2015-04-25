@@ -1,8 +1,8 @@
-<div class = 'container'>
+<div class = 'index container'>
 	<h2> All Users</h2>
 	<% @users.each do |user| %>
-  <h3>User: <%= user.first_name%> <%= user.last_name %></h3>
-	<%= image_tag user.avatar.url(:thumb) %>
+  <h3><%= user.first_name%> <%= user.last_name %></h3>
+	<%= image_tag user.avatar.url(:thumb), class: "img-responsive img-circle" %>
 	<h4>Email: <%= user.email %></h4>
 	<h4><%= link_to 'View Profile', user_path(user.id) %></h4>
 <% end %>

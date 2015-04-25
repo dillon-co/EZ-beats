@@ -1,18 +1,24 @@
-<div class="container">
+<div class="up container">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="up col-md-4">
 			<h2>My Profile</h2>
-			<%= image_tag @user.avatar.url(:medium) %>
+			<%= image_tag @user.avatar.url(:medium), class: "img-responsive img-circle" %>
 			<h3>Name: <%= @user.first_name%> <%= @user.last_name %></h3>
 			<h3>Email: <%= @user.email%></h3>
 			<section class="stats">
 				<%= render 'users/stats' %>
 				<%= render 'users/follow_form' if signed_in? %>
-				<%= render 'mixes/savedboard' %>
 			</section>
 		</div>
-		<div class="col-md-8">
-
+		<div class="up col-md-8">
+			<h3>My Songs</h3>
+			<% @songs.each do |song| %>
+			<% if post.user.followed_by?(current_user) || post.share_with == "public" || post.user == current_user %>
+				<h2><%= song.title %></h2>
+				<% end %>
+			<% end %>
+			<% else %>
+				You haven't made any songs.
 		</div>
 	</div>
 </div>

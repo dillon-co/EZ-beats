@@ -1,4 +1,49 @@
-<div class ="container">
-  <h2>About Us</h2>
-  <p>EZ-Beats was created to be a fun capstone project for the 2015 spring cohort.</p>
+<div class ="about container">
+  <h1>Project Staff</h1>
+  <div class='row'>
+
+    <div class='col-sm-4'>
+      <div class='about-photo'>
+        <h3 style="text-align: center">Dillon Cortez</h3>
+      </div>
+    </div>
+
+    <div class='col-sm-4'>
+      <div class='about-photo'>
+        <h3 style="text-align: center">Nina Alvarez</h3>
+      </div>
+    </div>
+
+    <div class='col-sm-4'>
+      <div class='about-photo'>
+        <%= image_tag 'regan.jpg', alt: 'should be regan', class: "img-responsive img-circle" %>
+        <h3 style="text-align: center">Regan Shupe</h3>
+        <p>
+          Artist by day, mysterious and handsome coder by night.
+          Wanted a better, more interesting career in web development.
+          Happy to be in a field that is ever changing and improving.
+        </p>
+        <ul>
+          <li>
+            <%= mail_to 'arcturanwinter@gmail.com' do %>
+            <i class="fa fa-laptop">&nbsp; arcturanwinter@gmail.com</i>
+            <% end %>
+          </li>
+          <li><i class="fa fa-phone"></i>&nbsp; 801-200-9907</li>
+          <li>
+            <% link_to 'https://github.com/GarrusN7' do %>
+            <i class="fa fa-github">&nbsp; https://github.com/GarrusN7</i>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class='col-sm-4'>
+    <h2>About Us</h2>
+    <p>EZ-Beats was created to be a fun capstone project for the 2015 spring cohort.</p>
+      <%= link_to 'http://devpointlabs.com/' do %>
+      <i>http://www.devpointlabs.com/</i>
+      <% end %>
+    </div>
+  </div>
 </div>
