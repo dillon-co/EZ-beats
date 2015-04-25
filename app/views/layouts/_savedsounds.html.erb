@@ -36,10 +36,11 @@ $(function(){
 
     function get_audio_element(native_div){
       var $div = $(native_div);
-      var $id = $div.attr('class');
-      $.each( $('audio'), function() {
-        if ($(this).attr('class').split('audio_play ')[1] == $div.attr('class').split('btn-warning ')[1] + "_sound"){
-          return $(this);
+      var $music = []
+      $('audio').each(function(index, elem){
+        if ($(elem).attr('class').split('audio_play ')[1] == $div.attr('class').split('btn-warning ')[1] + "_sound"){
+          $music.push($(elem));
+          return $music
         };
       });
     };
@@ -57,9 +58,10 @@ $(function(){
 
     $(function() {
       $("#play").on("click", function(event){
-        var $audio = get_audio_element(this);
-        $audio.all.currentTime = 0;
-        $audio.all.play();
+        var $audio = get_audio_element("#play");
+        debugger
+        $audio[0].currentTime = 0;
+        $audio[0].play();
       });
     });
 });   
