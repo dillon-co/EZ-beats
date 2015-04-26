@@ -66,10 +66,10 @@ p{
 h1.eztitle{
   width: 700px;
   text-align: center;
-  background-color: rgba(255, 202, 6, .9);
-  -webkit-animation-name: back;
-  -webkit-animation-duration: 4s;
-  -webkit-animation-iteration-count: infinite;
+  background-color: orange;
+  // -webkit-animation-name: back;
+  // -webkit-animation-duration: 4s;
+  // -webkit-animation-iteration-count: infinite;
   font-family: 'ghang_plain_';
   font-size: 80px;
   margin-top: -20px;
@@ -82,13 +82,13 @@ h1.eztitle{
     text-stroke-width: 1px;
 }
 
-@-webkit-keyframes back {
-  0%   {background-color: rgba(6, 249, 255, .9);}
-    25%  {background-color: rgba(6, 255, 43, .9);}
-    50%  {background-color: rgba(255, 68, 6, .9);}
-    100% {background-color: rgba(254, 6, 255, .9);}
+// @-webkit-keyframes back {
+//   0%   {background-color: rgba(6, 249, 255, .9);}
+//     25%  {background-color: rgba(6, 255, 43, .9);}
+//     50%  {background-color: rgba(255, 68, 6, .9);}
+//     100% {background-color: rgba(254, 6, 255, .9);}
 
-}
+// }
 
 #board.jumbotron h1{
   color: white;
@@ -234,9 +234,9 @@ label.toggle-off.btn{
 
 label.toggle-on.btn{
   padding-right: 15px;
-  padding-top: 6px;
-  background-color: #a2a2a2;
-  border-color: #FF00E7;
+  padding-top:15px;
+  background-color: orange;
+  // border-color: #FF00E7;
 }
 
 div.toggle.btn{
@@ -244,18 +244,18 @@ div.toggle.btn{
   min-height: 46px;
 }
 
-div.toggle.btn.btn-primary{
-  border-color: #44FF1B;
-  border-width: 7.5px;
+// div.toggle.btn.btn-primary{
+//   border-color: #44FF1B;
+//   border-width: 7.5px;
 
-  -webkit-animation-name: example; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
-    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
-    animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+//   -webkit-animation-name: example; /* Chrome, Safari, Opera */
+//     -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+//     -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+//     animation-name: example;
+//     animation-duration: 4s;
+//     animation-iteration-count: infinite;
 
-}
+// }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes example {
@@ -271,6 +271,12 @@ div.toggle.btn.btn-primary{
     25%  {border-color: yellow;}
     50%  {border-color: blue;}
     100% {border-color: #7FFF00;}
+}
+
+.btn{
+  background-color: #8A14C7;
+  
+  color: white
 }
 
 .actions{
