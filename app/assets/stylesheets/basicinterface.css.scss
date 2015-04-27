@@ -68,7 +68,6 @@ p{
 h1.eztitle{
   width: 700px;
   text-align: center;
-<
   background-color: rgba(86, 200, 202, .9);
   /*-webkit-animation-name: back;
   -webkit-animation-duration: 4s;
@@ -244,8 +243,7 @@ label.toggle-off.btn{
 label.toggle-on.btn{
   padding-right: 15px;
   padding-top:15px;
-  background-color: orange;
-  // border-color: #FF00E7;
+  border-color: #FF00E7;
 }
 
 div.toggle.btn{
@@ -267,7 +265,7 @@ div.toggle.btn.btn-primary{
     animation-iteration-count: infinite;
 
 
-// }
+}
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes example {
