@@ -37,32 +37,34 @@
 
 $(function(){
 
-    function get_audio_element(native_div){
+    function get_audio_element(native_div) {
       var $div = $(native_div);
-      var $checkbox = $div.find('input');
-      var id = $checkbox.attr('class');
-      return $("#mix_"+id+"_sound");
+      var $mix = []
+      $('audio').each(function(index, elem) {
+        if ($(elem).attr('class').split('audio_play ')[1] == $div.attr('class').split('btn-primary ')[1] + "_sound"){
+          $mix.push(elem);
+        };
+      });
+      return $mix 
     };
 
 
-    $("#play").on("click", function(event) {
-      var $div = $(this);
-      var $audio_element = get_audio_element(this);
-      if ($audio_element.play() == true){
-        $audio_element[0].pause();
-        $audio_element[0].currentTime = 0; 
-      }
-    });
-
-
     $(function() {
-      $("#play").on("click", function(event){
+      $("#play").on("click", function(event) {
         var $audio = get_audio_element(this);
-        $audio[0].currentTime = 0;
-        $audio[0].play();
+        $($audio).each(function(index, elem) {
+        if (elem.currentTime != 0){
+            elem.pause();
+            elem.currentTime = 0;
+          } else {  
+            elem.currentTime = 0;
+            elem.play();
+          };
+        });
       });
     });
 });   
+
 
 </script>
 
