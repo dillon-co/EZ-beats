@@ -86,6 +86,7 @@ h1.eztitle{
 }
 
 
+
 // @-webkit-keyframes back {
 //   0%   {background-color: rgba(6, 249, 255, .9);}
 //     25%  {background-color: rgba(6, 255, 43, .9);}
@@ -93,6 +94,7 @@ h1.eztitle{
 //     100% {background-color: rgba(254, 6, 255, .9);}
 
 // }
+
 
 /*@-webkit-keyframes back {
   0%   {background-color: rgba(6, 249, 255, .9);}
@@ -251,8 +253,7 @@ label.toggle-off.btn{
 label.toggle-on.btn{
   padding-right: 15px;
   padding-top:15px;
-  background-color: orange;
-  // border-color: #FF00E7;
+  border-color: #FF00E7;
 }
 
 div.toggle.btn{
@@ -260,6 +261,7 @@ div.toggle.btn{
   min-height: 46px;
   margin: 5px;
 }
+
 
 
 div.toggle.btn.btn-primary{
@@ -274,19 +276,6 @@ div.toggle.btn.btn-primary{
     animation-iteration-count: infinite;
 }    
 
-div.toggle.btn.btn-primary{
-  border-color: #FF4E0B;
-  border-width: 7.5px;
-
-  -webkit-animation-name: example; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
-    animation-name: example;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-
-
-}
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes example {
