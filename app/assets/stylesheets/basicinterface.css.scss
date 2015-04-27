@@ -40,8 +40,10 @@
 
 /* background gradient */
 .fa-headphones{
-  color:white;
   margin-top: 5px;
+   -webkit-text-fill-color: #FF7112;
+    -webkit-text-stroke-color: #FF7112;
+    -webkit-text-stroke-width: 2px;
 }
 body{
   /*height: 100%;*/
@@ -56,7 +58,7 @@ h5{
 }
 
 p{
-  width: 635px;
+  width: 660px;
 }
 
 
@@ -66,21 +68,23 @@ p{
 h1.eztitle{
   width: 700px;
   text-align: center;
-  background-color: orange;
-  // -webkit-animation-name: back;
-  // -webkit-animation-duration: 4s;
-  // -webkit-animation-iteration-count: infinite;
+  background-color: rgba(86, 200, 202, .9);
+  /*-webkit-animation-name: back;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;*/
+
   font-family: 'ghang_plain_';
   font-size: 80px;
   margin-top: -20px;
   text-shadow: -4px 6px 3px #000;
   -webkit-text-fill-color: white;
-    -webkit-text-stroke-color: #2F0A7F;
+    -webkit-text-stroke-color: #FF7112;
     -webkit-text-stroke-width: 2px;
     text-fill-color: white;
     text-stroke-color: #a4a4a4;
     text-stroke-width: 1px;
 }
+
 
 // @-webkit-keyframes back {
 //   0%   {background-color: rgba(6, 249, 255, .9);}
@@ -89,6 +93,15 @@ h1.eztitle{
 //     100% {background-color: rgba(254, 6, 255, .9);}
 
 // }
+
+/*@-webkit-keyframes back {
+  0%   {background-color: rgba(6, 249, 255, .9);}
+    25%  {background-color: rgba(6, 255, 43, .9);}
+    50%  {background-color: rgba(255, 68, 6, .9);}
+    100% {background-color: rgba(254, 6, 255, .9);}
+
+}*/
+
 
 #board.jumbotron h1{
   color: white;
@@ -110,6 +123,8 @@ div.jumbotron{
    
 }
 
+
+
 div.container{
   width: 662px;
   margin-top: 0px;
@@ -120,7 +135,7 @@ div.container{
 
 .container .jumbotron, .container-fluid .jumbotron{
 
-  padding-left: 25px;
+  padding-left: 20px;
   padding-top: 20px;
  
 }
@@ -243,35 +258,50 @@ label.toggle-on.btn{
 div.toggle.btn{
   min-width: 54px;
   min-height: 46px;
+  margin: 5px;
 }
 
-// div.toggle.btn.btn-primary{
-//   border-color: #44FF1B;
-//   border-width: 7.5px;
 
-//   -webkit-animation-name: example; /* Chrome, Safari, Opera */
-//     -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
-//     -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
-//     animation-name: example;
-//     animation-duration: 4s;
-//     animation-iteration-count: infinite;
+div.toggle.btn.btn-primary{
+  border-color: #44FF1B;
+  border-width: 7.5px;
 
-// }
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}    
+
+div.toggle.btn.btn-primary{
+  border-color: #FF4E0B;
+  border-width: 7.5px;
+
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+
+}
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes example {
-    0%   {border-color: red;}
-    25%  {border-color: yellow;}
-    50%  {border-color: blue;}
-    100% {border-color: #7FFF00;}
+    0%   {border-color: #E8640A;}
+    25%  {border-color: #FF9418;}
+    50%  {border-color: #E8990A;}
+    100% {border-color: #FFBE0D;}
 }
 
 /* Standard syntax */
 @keyframes example {
-    0%   {border-color: red;}
-    25%  {border-color: yellow;}
-    50%  {border-color: blue;}
-    100% {border-color: #7FFF00;}
+    0%   {border-color: #E8640A;}
+    25%  {border-color: #FF9418;}
+    50%  {border-color: #E8990A;}
+    100% {border-color: #FFBE0D;}
 }
 
 .btn{
@@ -283,3 +313,12 @@ div.toggle.btn{
 .actions{
   margin-top: 10px;
 }
+
+footer{
+  text-align: center;
+  font-weight: bold;
+  color:#FF7112;
+  background-color: rgba(0, 0, 0, .8);
+  margin-bottom: 50px;
+}
+

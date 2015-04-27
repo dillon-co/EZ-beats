@@ -34,7 +34,8 @@
             <% end %>   
         <% end %>
         <div>
-      <%= form.submit 'Save This Sound!', class: "btn btn-default", id:"save"%>
+          <button class="btn btn-primary" onclick="toggleOff()">Reset</button>
+          <%= form.submit 'Save This Sound!', class: "btn btn-default" %>
     </div>
         </p>
 
@@ -42,6 +43,7 @@
 
   </div>
 </div>
+<footer><small>Copyright 2015</small></footer>
 </body>
 
 
@@ -79,7 +81,7 @@ $(function(){
 
 
 
-function toggleOffByInput() {
+function toggleOff() {
   $('.songs').prop('checked', false).change();
 } 
 
