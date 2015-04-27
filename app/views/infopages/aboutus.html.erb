@@ -4,13 +4,35 @@
 
     <div class='col-sm-4'>
       <div class='about-photo'>
+        <%= image_tag 'dillon.jpg', alt: 'should be dillon', class: "img-responsive img-circle" %>
         <h3 style="text-align: center">Dillon Cortez</h3>
+        <p>
+          Something witty.
+        </p>
       </div>
     </div>
 
     <div class='col-sm-4'>
       <div class='about-photo'>
+        <%= image_tag 'nina.jpg', alt: 'should be nina', class: "img-responsive img-circle" %>
         <h3 style="text-align: center">Nina Alvarez</h3>
+        <p>
+          Bachelor Degree Graduate in Web Design and Interactive Media,
+          as well as Full Stack Ruby on Rails Development.
+          Nina also does corporate branding,
+          and for fun designs band flyers for a local venue and special events.
+        </p>
+        <ul>
+          <li>
+            <%= mail_to 'ninajalvarez@gmail.com' do %>
+            <i class="fa fa-laptop">&nbsp; ninajalvarez@gmail.com</i>
+            <% end %>
+          <li>
+            <% link_to 'https://github.com/njalvarez' do %>
+            <i class="fa fa-github">&nbsp; https://github.com/njalvarez</i>
+            <% end %>
+          </li>
+        </ul>
       </div>
     </div>
 
