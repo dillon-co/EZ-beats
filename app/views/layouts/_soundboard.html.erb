@@ -23,7 +23,7 @@
 
      
      
-     <p>
+ 
       <p id="songs">
        <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
             <% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
@@ -33,10 +33,13 @@
                 <%= form.check_box "#{dir_index}_#{index}", checked: @mix.is_checked?("#{dir_index}_#{index}_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"#{dir_index}_#{index}" %>
             <% end %>   
         <% end %>
-        <div>
-          <button class="btn btn-primary" onclick="toggleOff()">Reset</button>
-          <%= form.submit 'Save This Sound!', class: "btn btn-default" %>
-    </div>
+          <div>
+            <button class="btn btn-primary" onclick="toggleOffByInput(this)">Reset</button>
+          </div>
+        </br>
+          <div>
+            <%= form.submit 'Save This Sound!', class: "btn btn-default" %>
+          </div>
         </p>
 
 
@@ -51,8 +54,7 @@
 <script type="text/javascript">
  
 $(function(){
-
-
+    $('#toggle-one').bootstrapToggle();
     function get_audio_element(native_div){
       var $div = $(native_div);
       var $checkbox = $div.find('input');
@@ -81,9 +83,9 @@ $(function(){
 
 
 
-function toggleOff() {
-  $('.songs').prop('checked', false).change();
-} 
+function toggleOffByInput(thing) {
+    $(this).prop('checked', false).change()
+  }
 
 
 </script>

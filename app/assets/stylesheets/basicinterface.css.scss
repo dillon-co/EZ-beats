@@ -158,8 +158,9 @@ div.container{
 }
 .edit.container{
    padding: 30px;
-  width: 980px;
-  height: 800px;
+  max-width: 980px;
+  min-width: 400px;
+  max-height: 850px;
   margin-bottom: 100px;
   background-color: white;
   border-radius: 10px;
