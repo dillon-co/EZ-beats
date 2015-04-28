@@ -1,4 +1,6 @@
-<div class="about container">
+<!-- USER PROFILE PAGE /users/2 -->
+
+<div class="about container-fluid">
 	<div class="row">
 		<div class="col-md-4">
 			<h2><%= @user.first_name%>'s Profile</h2>
@@ -13,6 +15,7 @@
 		<div class="col-md-8">
 			<%= render 'layouts/savedsounds' %>
 			<%# @mixes.each do |mix| %>
+
 			<%# if post.user.followed_by?(current_user) || post.share_with == "public" || post.user == current_user %>
 				<!-- <h2><%#= mix.title %></h2> -->
 				<%# end %>
@@ -20,7 +23,8 @@
 			<% else %>
 				This user hasn't made any songs.
 
-			<% # render_activities(@activities, layout: :activity) %>
+
+			<%# render_activities(@activities, layout: :activity) %>
 
 		</div>
 	</div>

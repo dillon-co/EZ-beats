@@ -57,7 +57,7 @@ h5{
   text-shadow: rgb(237, 232, 232) 1px 1px 0px;
 }
 
-p{
+p#songs{
   width: 660px;
 }
 
@@ -65,13 +65,14 @@ p{
 
 
 
-h1.eztitle{
-  width: 700px;
+.eztitle{
+ /* width: 700px;*/
   text-align: center;
   background-color: rgba(86, 200, 202, .9);
   /*-webkit-animation-name: back;
   -webkit-animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;*/
+
   font-family: 'ghang_plain_';
   font-size: 80px;
   margin-top: -20px;
@@ -80,9 +81,21 @@ h1.eztitle{
     -webkit-text-stroke-color: #FF7112;
     -webkit-text-stroke-width: 2px;
     text-fill-color: white;
-    text-stroke-color: #a4a4a4;
+    text-stroke-color: #FF7112;
     text-stroke-width: 1px;
 }
+
+
+
+ @-webkit-keyframes back {
+     0%   {background-color: rgba(6, 249, 255, .9);}
+     25%  {background-color: rgba(6, 255, 43, .9);}
+     50%  {background-color: rgba(255, 68, 6, .9);}
+     100% {background-color: rgba(254, 6, 255, .9);}
+
+ }
+
+
 
 /*@-webkit-keyframes back {
   0%   {background-color: rgba(6, 249, 255, .9);}
@@ -92,13 +105,16 @@ h1.eztitle{
 
 }*/
 
+
+
+
 #board.jumbotron h1{
   color: white;
   font-family: 'ghang_plain_';
 }
 
-div.jumbotron{
-  width: 700px;
+#board{
+/*  width: 700px;*/
   margin-top: 30px;
   margin-bottom: 50px;
   padding-top: 10px;
@@ -108,15 +124,14 @@ div.jumbotron{
   border-radius: 10px;
   -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
      -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
-          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
-   
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;  
 }
 
 
 
-div.container{
-  width: 662px;
-  margin-top: 0px;
+.home.container-fluid{
+ /* width: 662px;*/
+  margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
   padding: 0;
@@ -126,13 +141,15 @@ div.container{
 
   padding-left: 20px;
   padding-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
  
 }
 
-.up.col-md-4 {
+.up.col-sm-4 {
   padding: 30px;
-  width: 350px;
-  height: 600px;
+  /*width: 350px;
+  height: 600px;*/
   margin-bottom: 100px;
   background-color: white;
   border-radius: 10px;
@@ -143,8 +160,8 @@ div.container{
 
 .up.col-md-8 {
   padding: 30px;
-  width: 630px;
-  height: 600px;
+  /*width: 630px;
+  height: 600px;*/
   margin-bottom: 100px;
   background-color: white;
   border-radius: 10px;
@@ -153,14 +170,12 @@ div.container{
           box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
 }
 
-.up.container{
-  width: 980px;
+.up.container-fluid{
+   margin: 20px 20px 100px 20px;
 }
-.edit.container{
-   padding: 30px;
-  max-width: 980px;
-  min-width: 400px;
-  max-height: 850px;
+.edit.container-fluid{
+  padding: 30px;
+  margin: 20px 20px 100px 20px;
   margin-bottom: 100px;
   background-color: white;
   border-radius: 10px;
@@ -169,10 +184,25 @@ div.container{
           box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
 }
 
-.about.container{
-   padding: 30px;
-  width: 980px;
-  height: 800px;
+.field{
+  margin-bottom: 20px;
+}
+
+.about.container-fluid{
+  padding: 30px;
+  margin: 20px 20px 100px 20px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
+}
+
+
+
+.index.container-fluid{
+  padding: 30px;
+  margin: 20px 20px 100px 20px;
   margin-bottom: 100px;
   background-color: white;
   border-radius: 10px;
@@ -181,22 +211,11 @@ div.container{
           box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
 }
 
-.index.container{
-   padding: 30px;
-  width: 980px;
-  height: 800px;
-  margin-bottom: 100px;
-  background-color: white;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
-     -moz-box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
-          box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
-}
-
-.songs.container{
-   padding: 30px;
-  width: 980px;
-  height: 800px;
+.songs.container-fluid{
+  padding: 30px;
+  margin: 20px 20px 100px 20px;
+  /*width: 980px;
+  height: 800px;*/
   margin-bottom: 100px;
   background-color: white;
   border-radius: 10px;
@@ -240,8 +259,7 @@ label.toggle-off.btn{
 
 label.toggle-on.btn{
   padding-right: 15px;
-  padding-top: 6px;
-  background-color: #a2a2a2;
+  padding-top:6px;
   border-color: #FF00E7;
 }
 
@@ -250,6 +268,8 @@ div.toggle.btn{
   min-height: 46px;
   margin: 5px;
 }
+
+
 
 div.toggle.btn.btn-primary{
   border-color: #FF4E0B;
@@ -261,8 +281,8 @@ div.toggle.btn.btn-primary{
     animation-name: example;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+}    
 
-}
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes example {
@@ -278,7 +298,10 @@ div.toggle.btn.btn-primary{
     25%  {border-color: #FF9418;}
     50%  {border-color: #E8990A;}
     100% {border-color: #FFBE0D;}
+
 }
+
+
 
 .actions{
   margin-top: 10px;
