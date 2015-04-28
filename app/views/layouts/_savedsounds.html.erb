@@ -7,7 +7,7 @@
 <% @mixes.each do |mix| %>
 <% next if mix.songs == [] %>
 <div>    
-
+  <% form_for mix do  %>
   <%= link_to "#{mix.id}", '#', class: "btn btn-lng btn-lg btn-primary mix_#{mix.id}", onclick: "return false", id:"play" %>
 
 
