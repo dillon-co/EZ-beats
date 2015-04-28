@@ -119,17 +119,22 @@ div.toggle.btn{
   min-height: 46px;
 }
 
-div.toggle.btn.btn-primary{
-  border-color: #44FF1B;
-  border-width: 7px;
+// div.toggle.btn.btn-primary{
+//   border-color: #44FF1B;
+//   border-width: 7px;
 
-  -webkit-animation-name: example; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
-    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
-    animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+//   -webkit-animation-name: example; /* Chrome, Safari, Opera */
+//     -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+//     -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+//     animation-name: example;
+//     animation-duration: 4s;
+//     animation-iteration-count: infinite;
 
+// }
+.btn{
+  background-color: #8A14C7;
+  border-color: #8A14C7;
+  color: white
 }
 
 /* Chrome, Safari, Opera */
