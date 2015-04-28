@@ -34,13 +34,16 @@
 
 
 </div>
-<%= link_to "Add To Song", '#', class: "btn btn-lng btn-lg btn-primary", onclick: "return flase", id: "new-song" %>
-
+<%= link_to "Add To Song", '#', class: "btn btn-lng btn-lg btn-primary", onclick: "return flase", id: "make-song" %>
+<%= link_to "Play Your Song", '#', class: "btn btn-lng btn-block", onclick: "return false", id: "new-song" %>
 
 </div>
 <script type="text/javascript">
 
 $(function(){
+
+    
+
 
     function get_audio_element(native_div) {
       var $div = $(native_div);
