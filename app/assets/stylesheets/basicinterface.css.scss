@@ -196,7 +196,10 @@ p#songs{
           box-shadow: 0 30px 15px -6px black, inset 0 0 10px #000000;
 }
 
-
+ul li{
+  text-decoration: none;
+  list-style-type: none;
+}
 
 .index.container-fluid{
   padding: 30px;
