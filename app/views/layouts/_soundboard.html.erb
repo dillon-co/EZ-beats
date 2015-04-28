@@ -35,7 +35,7 @@
         <% end %>
         <div>
 
-          <button class="btn btn-primary" onclick="toggleOff()">Reset</button>
+          <%= link_to "Reset", '#', class: "btn btn-default", onclick: " toggleOff()", id:"play" %>
           <%= form.submit 'Save This Sound!', class: "btn btn-default" %>
 
     </div>
