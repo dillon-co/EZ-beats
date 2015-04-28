@@ -15,6 +15,7 @@ gem 'public_activity'
 gem 'devise'
 gem 'rspec'
 gem 'socialization'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 

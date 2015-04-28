@@ -11,8 +11,24 @@
         </div>
         <h3 style="text-align: center">Dillon Cortez</h3>
         <p>
-          Something witty.
+          Does parkour, like to surf, play music, and code.
         </p>
+
+        <ul>
+          <li>
+            <%= mail_to 'dilloncortez@gmail.com' do %>
+            <i class="fa fa-laptop">&nbsp; dilloncortez@gmail.com</i>
+            <% end %>
+          </li>
+          <li><i class="fa fa-phone"></i>&nbsp; 801-824-2592</li>
+          <li>
+            <%= link_to 'https://github.com/grandmasterspoc' do %>
+            <i class="fa fa-github">&nbsp; https://github.com/grandmasterspoc</i>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+
     </div>
 
     <div class='col-md-3 col-md-offset-1 text-center'>

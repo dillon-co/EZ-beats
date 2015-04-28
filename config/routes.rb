@@ -8,12 +8,11 @@ Rails.application.routes.draw do
 
 
   get 'users/profile'
-
-
   get 'users/show'
   get 'users' => 'users#index'
   get 'about' => 'infopages#aboutus'
   get 'contact' => 'infopages#contact'
+  get 'donate' => 'charges#new'
   post 'infopages/email' => 'infopages#email'
   get 'songs' => 'songs#index'
   get 'profile', to: 'users#profile', as: :profile
@@ -22,6 +21,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :index]
   resources :relationships, only: [:create, :destroy]
   resources :songs
+  resources :charges
   resources :users do
     member do
       get :following, :followers
