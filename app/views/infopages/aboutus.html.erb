@@ -7,8 +7,25 @@
         <%= image_tag 'dillon.jpg', alt: 'should be dillon', class: "img-responsive img-circle" %>
         <h3 style="text-align: center">Dillon Cortez</h3>
         <p>
-          Something witty.
+          After being tired of the role of Secretary of Defense,
+          I decided to live out of a Van for 3 years on the beaches of Costa Rica.
+          The CIA wanted me back and I said no, then they offered me a scholarship
+          at DevPoint Labs if I was willing to find Osama Bin Ladin for them.
+          We all know what happened from there..
         </p>
+        <ul>
+          <li>
+            <%= mail_to 'dilloncortez@gmail.com' do %>
+            <i class="fa fa-laptop">&nbsp; dilloncortez@gmail.com</i>
+            <% end %>
+          </li>
+          <li><i class="fa fa-phone"></i>&nbsp; 801-824-2592</li>
+          <li>
+            <%= link_to 'https://github.com/grandmasterspoc' do %>
+            <i class="fa fa-github">&nbsp; https://github.com/grandmasterspoc</i>
+            <% end %>
+          </li>
+        </ul>
       </div>
     </div>
 
