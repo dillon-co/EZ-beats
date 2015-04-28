@@ -10,7 +10,7 @@
     @mix = Mix.create(mix_params)
     parse_songs(@mix)
     if @mix.save
-      redirect_to new_mix_path
+      redirect_to user_path(current_user)
     else
       render :new
     end    
