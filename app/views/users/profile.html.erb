@@ -11,14 +11,15 @@
 			</section>
 		</div>
 		<div class="up col-md-8">
-			<h3>My Songs</h3>
-			<% @songs.each do |song| %>
-			<% if post.user.followed_by?(current_user) || post.share_with == "public" || post.user == current_user %>
-				<h2><%= song.title %></h2>
-				<% end %>
-			<% end %>
-			<% else %>
-				You haven't made any songs.
+			<h1 class="eztitle">My Songs</h1>
+				<%= render 'layouts/savedsounds' %>
+			<%# @songs.each do |song| %>
+			<%# if post.user.followed_by?(current_user) || post.share_with == "public" || post.user == current_user %>
+				<h2><%#= song.title %></h2>
+				<%# end %>
+			<%# end %>
+			<%# else %>
+				<!-- You haven't made any songs. -->
 		</div>
 	</div>
 </div>
