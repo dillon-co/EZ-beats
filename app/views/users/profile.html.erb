@@ -11,14 +11,14 @@
 			</section>
 		</div>
 		<div class="up col-md-8">
-			<h3>My Songs</h3>
-			<% @songs.each do |song| %>
+			<h3>My Mixes</h3>
+			<% @mixes.each do |mix| %>
 			<% if post.user.followed_by?(current_user) || post.share_with == "public" || post.user == current_user %>
-				<h2><%= song.title %></h2>
+				<h2><%= mix.title %></h2>
 				<% end %>
 			<% end %>
 			<% else %>
-				You haven't made any songs.
+				You haven't made any mixes.
 		</div>
 	</div>
 </div>
