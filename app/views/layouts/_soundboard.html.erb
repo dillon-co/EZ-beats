@@ -18,7 +18,10 @@
   <h1 class="eztitle">EZ-Beats</h1>
   <div id="board"class="jumbotron">
     <div class="home container-fluid">
-
+      <h3>Name This Song!</h3>
+      <%= form.text_field :name %>
+    </div>  
+    <div class="home container-fluid">
        <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
             <% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
               <% Dir.foreach("#{Dir.getwd}/public/audios/#{folder}").with_index do |song, index| %>
@@ -32,12 +35,8 @@
           <%= form.submit 'Save This Sound!', class: "btn btn-default" %>
 
     </div>
-        <!-- I don't know where your P tag starts, hussie -mike the muscle russell -->
-        </p>
-
 
   <button class="btn btn-primary" onclick="toggleOffByInput()">Reset</button> 
-
 
   </div>
    
