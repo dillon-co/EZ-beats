@@ -92,12 +92,8 @@ $(function(){
         var $audio = get_audio_element(this);
         $audio[0].currentTime = 0;
         $audio[0].play();
-        clearInterval($timer);
-        $isPlaying = 7500;
       });
-    }, $isPlaying);
-
-
+    }, 7500);
 
 });   
 
