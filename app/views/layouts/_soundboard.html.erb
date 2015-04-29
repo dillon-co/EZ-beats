@@ -31,12 +31,13 @@
                 <% end %>   
         <% end %>
 
-        <div>
+        <div style="margin-top: 20px;">
           <%= form.submit 'Save This Sound!', class: "btn btn-default" %>
 
-    </div>
+        </div>
 
-  <button class="btn btn-primary" onclick="toggleOffByInput()">Reset</button> 
+  <div class="btn btn-primary" style="margin-top: 20px;" onclick="toggleOffByInput()">Reset</div> 
+  <div class="btn btn-primary" style="margin-top: 20px;"onclick="toggleOff()">Stop</div>
 
   </div>
    
@@ -51,11 +52,17 @@
 
 
 
+function toggleOff() {
+    $('.songs').prop('checked', false).change();
+      $('audio').each(function(){
+        this.pause();
+        this.currentTime = 0;
+      });
+    };
+
 function toggleOffByInput() {
     $('.songs').prop('checked', false).change();
-
-    };   
-
+  }
 
 $(function(){
     $('#toggle-one').bootstrapToggle();
