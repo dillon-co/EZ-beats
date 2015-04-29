@@ -18,7 +18,10 @@
   <h1 class="eztitle">EZ-Beats</h1>
   <div id="board"class="jumbotron">
     <div class="home container-fluid">
-
+      <h3>Name This Song!</h3>
+      <%= form.text_field :name %>
+    </div>  
+    <div class="home container-fluid">
        <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
             <% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
               <% Dir.foreach("#{Dir.getwd}/public/audios/#{folder}").with_index do |song, index| %>
@@ -28,16 +31,13 @@
                 <% end %>   
         <% end %>
 
-        <div>
+        <div style="margin-top: 20px;">
           <%= form.submit 'Save This Sound!', class: "btn btn-default" %>
 
-    </div>
-        <!-- I don't know where your P tag starts, hussie -mike the muscle russell -->
-        </p>
+        </div>
 
-
-  <button class="btn btn-primary" onclick="toggleOffByInput()">Reset</button> 
-
+  <div class="btn btn-primary" style="margin-top: 20px;" onclick="toggleOffByInput()">Reset</div> 
+  <div class="btn btn-primary" style="margin-top: 20px;"onclick="toggleOff()">Stop</div>
 
   </div>
    
@@ -52,13 +52,23 @@
 
 
 
+function toggleOff() {
+    $('.songs').prop('checked', false).change();
+      $('audio').each(function(){
+        this.pause();
+        this.currentTime = 0;
+      });
+    };
+
 function toggleOffByInput() {
     $('.songs').prop('checked', false).change();
-    
-    
   }
 
 $(function(){
+
+    var $isPlaying = 0;
+    
+
     $('#toggle-one').bootstrapToggle();
     function get_audio_element(native_div){
       var $div = $(native_div);
@@ -70,7 +80,6 @@ $(function(){
     $("div.toggle").on("click", function(event) {
       var $div = $(this);
       var $audio_element = get_audio_element(this);
-  
       if (!$div.hasClass('off')){
         $audio_element[0].pause();
         $audio_element[0].currentTime = 0; 
@@ -78,19 +87,15 @@ $(function(){
     });
 
 
-
-    setInterval(function() {
+    $timer = setInterval(function() {
       $("div.toggle:not(.off)").each(function(){
         var $audio = get_audio_element(this);
         $audio[0].currentTime = 0;
         $audio[0].play();
       });
     }, 7500);
+
 });   
-
-
-
-
 
 
 
