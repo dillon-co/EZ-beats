@@ -34,16 +34,43 @@
 
 
 </div>
-<%= link_to "Add To Song", '#', class: "btn btn-lng btn-lg btn-primary", onclick: "return flase", id: "make-song" %>
+<%= link_to "Add To Song", '#', class: "btn btn-block", onclick: "return flase", id: "make-song" %>
 <%= link_to "Play Your Song", '#', class: "btn btn-lng btn-block", onclick: "return false", id: "new-song" %>
-
 </div>
+
 <script type="text/javascript">
 
 $(function(){
+    var $song_arr = [];
+    var $audio_arr = [];
+    var $button = 0;
 
+
+    $(".btn-lg").on("click", function(event) {
+      $button = $(this);
+    });
+
+
+    $("#make-song").on("click", function(event) {
+      $song_arr.push($button);
+      $($song_arr).each(function(index, button) {
+        var $music = get_audio_element(button);
+        $audio_arr.push($music);
+      });
+    });
+
+
+    $("#new-song").on("click", function(event) {
+      var $i = 0
+      setInterval(function() {
+        $($audio_arr[$i]).each(function(index, elem) {
+            elem.currentTime = 0;
+            elem.play();
+        $i++;
+        });
+      }, 7500);
+    });
     
-
 
     function get_audio_element(native_div) {
       var $div = $(native_div);
@@ -55,6 +82,7 @@ $(function(){
       });
       return $mix 
     };
+
 
     $(function() {
       $(".btn-lg").on("click", function(event) {
@@ -72,7 +100,4 @@ $(function(){
     });
 });   
 
-
 </script>
-
-
