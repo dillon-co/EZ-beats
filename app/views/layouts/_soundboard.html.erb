@@ -17,44 +17,49 @@
   
   <h1 class="eztitle">EZ-Beats</h1>
   <div id="board"class="jumbotron">
-    <div class="container">
+    <div class="home container-fluid">
 
-      
-
-     
-     
-     <p>
-      <p id="songs">
        <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
             <% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
               <% Dir.foreach("#{Dir.getwd}/public/audios/#{folder}").with_index do |song, index| %>
                 <% next if song == '.' || song == '..' || song == '.DS_Store' %>
                 <%= audio_tag "#{folder}/#{song}", class: "audio_play", id:"#{dir_index}_#{index}_sound" %>
                 <%= form.check_box "#{dir_index}_#{index}", checked: @mix.is_checked?("#{dir_index}_#{index}_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"#{dir_index}_#{index}" %>
-            <% end %>   
+                <% end %>   
         <% end %>
-        <div>
 
-          <%= link_to "Reset", '#', class: "btn btn-default", onclick: " toggleOff()", id:"play" %>
+        <div>
           <%= form.submit 'Save This Sound!', class: "btn btn-default" %>
 
     </div>
+        <!-- I don't know where your P tag starts, hussie -mike the muscle russell -->
         </p>
 
 
+  <button class="btn btn-primary" onclick="toggleOffByInput()">Reset</button> 
+
 
   </div>
+   
 </div>
-<footer><small>Copyright 2015</small></footer>
+  
+     
+<footer><small>&copy;Copyright 2015</small></footer>
 </body>
 
 
-
 <script type="text/javascript">
- 
+
+
+
+function toggleOffByInput() {
+    $('.songs').prop('checked', false).change();
+    
+    
+  }
+
 $(function(){
-
-
+    $('#toggle-one').bootstrapToggle();
     function get_audio_element(native_div){
       var $div = $(native_div);
       var $checkbox = $div.find('input');
@@ -83,9 +88,8 @@ $(function(){
     }, 7500);
 });   
 
-    function toggleOff() {
-      $('.songs').prop('checked', false).change();
-    }; 
+
+
 
 
 
