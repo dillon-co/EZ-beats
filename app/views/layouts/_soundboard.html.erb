@@ -58,6 +58,10 @@ function toggleOffByInput() {
   }
 
 $(function(){
+
+    var $isPlaying = 0;
+    
+
     $('#toggle-one').bootstrapToggle();
     function get_audio_element(native_div){
       var $div = $(native_div);
@@ -69,7 +73,6 @@ $(function(){
     $("div.toggle").on("click", function(event) {
       var $div = $(this);
       var $audio_element = get_audio_element(this);
-  
       if (!$div.hasClass('off')){
         $audio_element[0].pause();
         $audio_element[0].currentTime = 0; 
@@ -77,19 +80,19 @@ $(function(){
     });
 
 
-
-    setInterval(function() {
+    $timer = setInterval(function() {
       $("div.toggle:not(.off)").each(function(){
         var $audio = get_audio_element(this);
         $audio[0].currentTime = 0;
         $audio[0].play();
+        clearInterval($timer);
+        $isPlaying = 7500;
       });
-    }, 7500);
+    }, $isPlaying);
+
+
+
 });   
-
-
-
-
 
 
 
