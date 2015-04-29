@@ -1,14 +1,16 @@
-<h1 class="eztitle">Saved Sounds</h1>
+
+<h1>Saved Sounds</h1>
+
     
 <div class="jumbotron">
-  <div class="container">
+  <div class="container-fluid">
 
 
 <% @mixes.each do |mix| %>
 <% next if mix.songs == [] %>
 <div>    
 
-  <%= link_to "", '#', class: "btn btn-lng btn-lg btn-primary mix_#{mix.id}", onclick: "return false", id:"play" %>
+  <%= link_to "#{mix.name}", '#', class: "btn btn-lng btn-lg btn-primary mix_#{mix.id}", onclick: "return false", id:"play" %>
 
 
   <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
@@ -29,11 +31,16 @@
       <% end %>
     <% end %> 
   <% end %>  
-</div>
+  </div>
 <% end %>
 
+
 </div>
+<%= link_to "Add To Song", '#', class: "btn btn-lng btn-lg btn-primary", onclick: "return flase", id: "new-song" %>
+
+
 </div>
+
 <script type="text/javascript">
 
 $(function(){
@@ -48,7 +55,6 @@ $(function(){
       });
       return $mix 
     };
-
 
     $(function() {
       $(".btn-lg").on("click", function(event) {
