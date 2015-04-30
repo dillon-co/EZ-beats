@@ -1,42 +1,42 @@
 
 <h1>Saved Sounds</h1>
 
-    
+
 <div class="jumbotron">
   <div class="container-fluid">
 
 
 <% @mixes.each do |mix| %>
 <% next if mix.songs == [] %>
-<div>    
+<div>
 
   <%= link_to "#{mix.name}", '#', class: "btn btn-lng btn-lg btn-primary mix_#{mix.id}", onclick: "return false", id:"play" %>
 
 
   <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
     <% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
-    
+
     <% Dir.foreach("#{Dir.getwd}/public/audios/#{folder}").with_index do |song, index| %>
       <% next if song == '.' || song == '..' || song == '.DS_Store' %>
       <% next if mix.songs == [] %>
       <% sound = mix.songs %>
       <% dir = Dir.chdir("#{Dir.getwd}") %>
-      
-      <% sound.each do |id| %>  
+
+      <% sound.each do |id| %>
         <% if id[0].to_i == dir_index && id[2].to_i == index %>
           <%= audio_tag "#{folder}/#{song}", class: "audio_play mix_#{mix.id}_sound", id:"mix_#{mix.id}_sound" %>
-          
+
 
         <% end %>
       <% end %>
-    <% end %> 
-  <% end %>  
+    <% end %>
+  <% end %>
   </div>
 <% end %>
 
 
 </div>
-<%= link_to "Add To Song", '#', class: "btn btn-lng btn-lg btn-primary", onclick: "return flase", id: "new-song" %>
+<%= link_to "Add A Song", '#', class: "btn btn-lng btn-lg btn-primary", onclick: "return flase", id: "new-song" %>
 
 
 </div>
@@ -53,7 +53,7 @@ $(function(){
           $mix.push(elem);
         };
       });
-      return $mix 
+      return $mix
     };
 
     $(function() {
@@ -63,16 +63,14 @@ $(function(){
         if (elem.currentTime != 0){
             elem.pause();
             elem.currentTime = 0;
-          } else {  
+          } else {
             elem.currentTime = 0;
             elem.play();
           };
         });
       });
     });
-});   
+});
 
 
 </script>
-
-
