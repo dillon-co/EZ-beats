@@ -6,6 +6,11 @@
     @mix = Mix.new
   end
 
+  def index
+    @user = current_user
+    @mixes = Mix.all
+  end
+
   def create
     @mix = Mix.create(mix_params)
     parse_songs(@mix)
