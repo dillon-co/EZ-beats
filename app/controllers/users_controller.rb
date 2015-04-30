@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   end
 
   def index
+    @mixes = Mix.all
     @users = User.all
   end
 

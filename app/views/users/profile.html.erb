@@ -10,15 +10,8 @@
 				<%= render 'users/follow_form' if signed_in? %>
 			</section>
 		</div>
-		<div class="up col-md-8">
-			<h3>My Mixes</h3>
-			<% @mixes.each do |mix| %>
-			<% if post.user.followed_by?(current_user) || post.share_with == "public" || post.user == current_user %>
-				<h2><%= mix.title %></h2>
-				<% end %>
-			<% end %>
-			<% else %>
-				You haven't made any mixes.
+		<div class="col-md-8">
+			<%= render 'layouts/savedsounds' %>
 		</div>
 	</div>
 </div>
