@@ -15,33 +15,36 @@
 </head>
 
 <body>
+
+
+
+<div class = 'index container-fluid'>
   <h1 class="eztitle">Saved Sounds</h1>
+<!-- <% @mixes.each do |mix| %>
 
-
-    
-<div class="jumbotron">
-  <div class="container">
-<% @mixes.each do |mix| %>
-  
   <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
     <% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
-    
+
     <% Dir.foreach("#{Dir.getwd}/public/audios/#{folder}").with_index do |song, index| %>
       <% next if song == '.' || song == '..' || song == '.DS_Store' %>
       <% next if mix.songs == [] %>
       <% sound = mix.songs %>
       <% dir = Dir.chdir("#{Dir.getwd}") %>
-      
-      <% sound.each do |id| %>  
+
+      <% sound.each do |id| %>
         <% if id[0].to_i == dir_index && id[2].to_i == index %>
           <%= audio_tag "#{folder}/#{song}", class: "audio_play", id:"#{id}_sound" %>
           <%= check_box "#{id}", checked: mix.is_checked?("#{id}_sound"), data: {toggle: 'toggle'}, class: "toggle btn btn-default off", id:"#{id}" %>
-  
+
           <% end %>
         <% end %>
-      <% end %> 
-    <% end %>  
-<% end %> 
+      <% end %>
+    <% end %>
+<% end %>  -->
+
+<h1> Mixes </h1>
+<p><%= link_to 'New Mix', root_path %></p>
+<%= render 'layouts/savedsounds' %>
 </div>
 
 <script type="text/javascript">
@@ -62,7 +65,7 @@ $(function(){
       var $audio_element = get_audio_element(this);
       if (!$div.hasClass('off')){
         $audio_element[0].pause();
-        $audio_element[0].currentTime = 0; 
+        $audio_element[0].currentTime = 0;
       }
     });
 
@@ -73,8 +76,7 @@ $(function(){
         $audio[0].play();
       });
     }, 7500);
-});   
+});
 
 </script>
 </body>
-
