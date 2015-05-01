@@ -14,14 +14,13 @@
 
 
 <body>
-  
+
   <h1 class="eztitle">EZ-Beats</h1>
   <div id="board"class="jumbotron">
     <div class="home container-fluid">
       <h3>Name This Song!</h3>
       <%= form.text_field :name %>
     </div> 
-     
     <div class="home container-fluid">
        <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
             <% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
@@ -33,22 +32,25 @@
                 <%= audio_tag "#{folder}/#{song}", class: "audio_play", id:"#{dir_index}_#{index}_sound" %>
                 
                 <%= form.check_box "#{dir_index}_#{index}", checked: @mix.is_checked?("#{dir_index}_#{index}_sound"), data: {toggle: 'toggle'}, class: "songs btn btn-lg btn-primary", id:"#{dir_index}_#{index}" %>
-                <% end %>   
+                <% end %>
         <% end %>
-
         <div style="margin-top: 20px;">
+          <% if !current_user %>
+          <%= form.submit 'Save This Sound!', class: "btn btn-default disabled" %>
+          <% else %>
+          <%= form.hidden_field :user_id, value: current_user.id, class: 'form-control'  %>
           <%= form.submit 'Save This Sound!', class: "btn btn-default" %>
-
+          <% end %>
         </div>
 
-  <div class="btn btn-primary" style="margin-top: 20px;" onclick="toggleOffByInput()">Reset</div> 
+  <div class="btn btn-primary" style="margin-top: 20px;" onclick="toggleOffByInput()">Reset</div>
   <div class="btn btn-primary" style="margin-top: 20px;"onclick="toggleOff()">Stop</div>
 
   </div>
-   
+
 </div>
-  
-     
+
+
 <footer><small>&copy;Copyright 2015</small></footer>
 </body>
 
@@ -71,6 +73,12 @@ function toggleOffByInput() {
 
 $(function(){
 
+<<<<<<< HEAD
+=======
+    var $isPlaying = 0;
+
+
+>>>>>>> b766d6f8c27f2f262910b974812fe185df15aa1d
     $('#toggle-one').bootstrapToggle();
     function get_audio_element(native_div){
       var $div = $(native_div);
@@ -84,7 +92,7 @@ $(function(){
       var $audio_element = get_audio_element(this);
       if (!$div.hasClass('off')){
         $audio_element[0].pause();
-        $audio_element[0].currentTime = 0; 
+        $audio_element[0].currentTime = 0;
       }
     });
 
@@ -97,10 +105,9 @@ $(function(){
         });
       }, 7500);
 
-});   
+});
 
 
 
 
 </script>
-
