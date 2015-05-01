@@ -8,9 +8,9 @@
 
 <% @mixes.each do |mix| %>
 <% next if mix.songs == [] %>
-<div>    
-
-  <%= link_to "#{mix.name}", '#', class: "btn btn-lng btn-lg btn-primary mix_#{mix.id}", onclick: "return false", id:"play" %>
+<div>   
+ 
+  <%= link_to "-#{mix.name}-", '#', class: "col-sm-3 btn btn-lg btn-primary mix_#{mix.id}", onclick: "return false", id:"play" %>
 
 
   <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
@@ -21,7 +21,6 @@
       <% next if mix.songs == [] %>
       <% sound = mix.songs %>
       <% dir = Dir.chdir("#{Dir.getwd}") %>
-      
       <% sound.each do |id| %>  
         <% if id[0].to_i == dir_index && id[2].to_i == index %>
           <%= audio_tag "#{folder}/#{song}", class: "audio_play mix_#{mix.id}_sound", id:"mix_#{mix.id}_sound" %>
@@ -47,13 +46,13 @@ $(function(){
 
     function get_audio_element(native_div) {
       var $div = $(native_div);
-      var $mix = []
+      var $mix = [];
       $('audio').each(function(index, elem) {
         if ($(elem).attr('class').split('audio_play ')[1] == $div.attr('class').split('btn-primary ')[1] + "_sound"){
           $mix.push(elem);
         };
       });
-      return $mix 
+      return $mix;  
     };
 
     $(function() {

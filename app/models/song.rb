@@ -8,7 +8,7 @@ class Song < ActiveRecord::Base
     args.each do |song|
       f = File.open(song, 'rb')
       # @s = f.read
-      binding.pry
+      # binding.pry
      end
     # output = @s.write(args.each)
     # puts output.inspect
