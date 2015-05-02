@@ -1,9 +1,6 @@
-<!-- USER PROFILE PAGE /users/2 -->
-
-	<body>
-<div class="about container-fluid">
+<div class="up container-fluid">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="up col-sm-4">
 			<h2><%= @user.first_name%>'s Profile</h2>
 			<%= image_tag @user.avatar.url(:medium), class: "img-responsive img-circle" %>
 			<h3>Name: <%= @user.first_name%> <%= @user.last_name %></h3>
@@ -13,13 +10,35 @@
 				<%= render 'users/follow_form' if signed_in? %>
 			</section>
 		</div>
-		<div class="col-md-8">
+		<div class="up col-md-8">
+			<h2> Mixes </h2>
 			<% @mixes.each do |mix| %>
+			<div>
 				<% if @user.id == mix.user_id %>
-				<ul style="margin-bottom: 15;">
-					<li class='btn btn-primary'><%= mix.name %></li>
-				</ul>
+
+				<%= link_to "#{mix.name}", '#', class: "btn btn-lng btn-lg btn-primary mix_#{mix.id}", onclick: "return false", id:"play" %>
+
+
+				<% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
+				<% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
+
+				<% Dir.foreach("#{Dir.getwd}/public/audios/#{folder}").with_index do |song, index| %>
+				<% next if song == '.' || song == '..' || song == '.DS_Store' %>
+				<% next if mix.songs == [] %>
+				<% sound = mix.songs %>
+				<% dir = Dir.chdir("#{Dir.getwd}") %>
+
+				<% sound.each do |id| %>
+				<% if id[0].to_i == dir_index && id[2].to_i == index %>
+				<%= audio_tag "#{folder}/#{song}", class: "audio_play mix_#{mix.id}_sound", id:"mix_#{mix.id}_sound" %>
+
+
 				<% end %>
+				<% end %>
+				<% end %>
+				<% end %>
+			</div>
+			<% end %>
 			<% end %>
 		</div>
 	</div>
@@ -29,34 +48,33 @@
 
 	$(function(){
 
-	    $('#toggle-one').bootstrapToggle();
+		function get_audio_element(native_div) {
+			var $div = $(native_div);
+			var $mix = [];
+			$('audio').each(function(index, elem) {
+				if ($(elem).attr('class').split('audio_play ')[1] == $div.attr('class').split('btn-primary ')[1] + "_sound"){
+					$mix.push(elem);
+				};
+			});
+			return $mix;
+		};
 
-	    function get_audio_element(native_div){
-	      var $div = $(native_div);
-	      var $checkbox = $div.find('input');
-	      var id = $checkbox.attr('class');
-	      return $("#"+id+"_sound");
-	    };
-
-	    $("div.toggle").on("click", function(event) {
-	      var $div = $(this);
-	      var $audio_element = get_audio_element(this);
-	      if (!$div.hasClass('off')){
-	        $audio_element[0].pause();
-	        $audio_element[0].currentTime = 0;
-	      }
-	    });
-
-	    setInterval(function() {
-	      $("div.toggle:not(.off)").each(function(){
-	        var $audio = get_audio_element(this);
-	        $audio[0].currentTime = 0;
-	        $audio[0].play();
-	      });
-	    }, 7500);
+		$(function() {
+			$(".btn-lg").on("click", function(event) {
+				var $audio = get_audio_element(this);
+				$($audio).each(function(index, elem) {
+					if (elem.currentTime != 0){
+						elem.pause();
+						elem.currentTime = 0;
+					} else {
+						elem.currentTime = 0;
+						elem.play();
+					};
+				});
+			});
+		});
 	});
 
 	</script>
-	</body>
 
 </div>
