@@ -21,10 +21,6 @@
     end
   end
 
-  def index
-    @mixes = Mix.all
-  end
-
   private
 
   def parse_songs(mix)
