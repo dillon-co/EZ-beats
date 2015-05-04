@@ -85,7 +85,10 @@ p#songs{
     text-stroke-width: 1px;
 }
 
-
+#title{
+ -webkit-text-fill-color: #f0ad4e;
+  
+}
 
  @-webkit-keyframes back {
      0%   {background-color: rgba(6, 249, 255, .9);}
