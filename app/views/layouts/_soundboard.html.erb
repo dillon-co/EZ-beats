@@ -26,7 +26,7 @@
 
        <% Dir.foreach("#{Dir.getwd}/public/audios").with_index do |folder, dir_index| %>
             <% next if folder == '.' || folder == '..' || folder == '.DS_Store' %>
-             <div id="title" margin: 5px;"><%= "#{folder.capitalize}" %></div>
+             <div id="title" style="margin: 5px;"><%= "#{folder.capitalize}" %></div>
               <% Dir.foreach("#{Dir.getwd}/public/audios/#{folder}").with_index do |song, index| %>
                 <% next if song == '.' || song == '..' || song == '.DS_Store' %>
                 
