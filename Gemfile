@@ -17,6 +17,7 @@ gem 'socialization'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'aws-sdk'
 
 group :development, :test do
   # gem 'pry-nav'
